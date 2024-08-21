@@ -1,0 +1,1594 @@
+<!doctype html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js"></script>
+    <title>Skrypty i pluginy dla programu Adobe InDesign</title>
+  </head>
+  <body
+    class="text-base-clamp-sm mx-auto max-w-screen-xxl bg-background font-opensans text-text"
+  >
+    <!-- MARK: Nav -->
+    <div class="relative z-20 md:mt-5 md:px-4">
+      <nav
+        class="mx-auto flex h-[66px] w-full max-w-[1400px] items-center border-b-2 border-primary md:h-12 md:rounded-lg md:border-none md:shadow-lg lg:h-16"
+      >
+        <div class="mx-4 flex w-full items-center justify-between">
+          <!-- left -->
+          <svg class="fill-primary" width="30mm" height="9.8704mm">
+            <use href="#logo"></use>
+          </svg>
+          <!-- center -->
+          <div
+            id="menu-items"
+            aria-expanded="false"
+            class="absolute -left-full top-0 h-screen w-full bg-background transition-all duration-300 md:static md:left-0 md:h-fit"
+          >
+            <div class="bg-cgrey p-5 md:hidden">
+              <button
+                id="menu-close"
+                class="bg-transparent"
+                aria-controls="menu-items"
+                aria-label="close navigation"
+              >
+                <svg
+                  width="28"
+                  height="18"
+                  viewBox="0 0 28 18"
+                  class="fill-primary"
+                >
+                  <use href="#arrowleft" />
+                </svg>
+              </button>
+              <p class="mt-7 text-xl font-bold text-primary">
+                Witamy w DeepForge
+              </p>
+            </div>
+            <ul
+              class="mx-auto space-y-5 px-5 pt-10 text-lg md:flex md:items-center md:justify-center md:gap-5 md:space-y-0 md:px-0 md:pt-0 md:text-base md:font-light lg:gap-10"
+            >
+              <li class="group relative flex h-8 w-fit items-center">
+                <a
+                  href="#"
+                  class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
+                  >O Nas</a
+                >
+                <!-- dropdown -->
+                <ul
+                  class="absolute left-1/2 top-8 z-10 hidden w-28 -translate-x-1/2 flex-col items-center justify-center rounded-lg bg-background p-1 shadow-lg group-hover:flex"
+                >
+                  <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
+                    <a href="#" class="text-sm">Główna</a>
+                  </li>
+                  <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
+                    <a href="#omnie" class="text-sm">Kim jestem</a>
+                  </li>
+                  <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
+                    <a href="#uslugi" class="text-sm">Usługi</a>
+                  </li>
+                  <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
+                    <a href="#korzysci" class="text-sm">Korzyści</a>
+                  </li>
+                  <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
+                    <a href="#portfolio" class="text-sm">Skrypty</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="group relative flex h-8 w-fit items-center">
+                <a
+                  href="founder.html"
+                  class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
+                  >Założyciel</a
+                >
+              </li>
+
+              <li class="group relative flex h-8 w-fit items-center">
+                <a
+                  href="founder.html"
+                  class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
+                  >FAQ</a
+                >
+              </li>
+
+              <li class="group relative flex h-8 w-fit items-center">
+                <a
+                  href="contact.html"
+                  class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- right -->
+          <div class="flex items-center gap-4">
+            <div class="group relative flex items-center gap-2">
+              <svg width="24" height="32" viewBox="0 0 25 20">
+                <use href="#gbflag"></use>
+              </svg>
+              <span>Eng</span>
+              <svg width="12" height="8" viewBox="0 0 12 8" class="fill-text">
+                <use href="#arrowdown" />
+              </svg>
+              <!-- dropdown -->
+              <ul
+                class="absolute left-1/2 top-8 z-10 hidden w-24 -translate-x-1/2 flex-col items-center justify-center rounded-lg bg-background p-1 shadow-lg group-hover:flex"
+              >
+                <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
+                  <a href="#" class="flex items-center justify-center gap-2">
+                    <svg width="24" viewBox="0 0 25 20">
+                      <use href="#gbflag"></use></svg
+                    ><span>Eng</span>
+                  </a>
+                </li>
+                <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
+                  <a href="#" class="flex items-center justify-center gap-2">
+                    <svg
+                      width="24"
+                      viewBox="0 0 8 5"
+                      class="ring-1 ring-primary/20"
+                    >
+                      <use href="#polflag"></use></svg
+                    ><span>Pol</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              id="menu-open"
+              type="button"
+              aria-controls="menu-items"
+              aria-label="open navigation"
+              class="group flex aspect-square w-9 items-center justify-center rounded-full border border-primary bg-primary hover:bg-background md:hidden"
+            >
+              <svg
+                width="14"
+                height="11"
+                viewBox="0 0 14 11"
+                class="stroke-white group-hover:stroke-primary"
+              >
+                <use href="#hamburger"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <article>
+      <!-- MARK: hero -->
+      <header id="hero" class="mt-10 px-4">
+        <div
+          class="mx-auto grid max-w-[1400px] items-center justify-items-center md:grid-cols-2 md:justify-items-start"
+        >
+          <div class="h-fit w-fit overflow-hidden rounded-md shadow-lg">
+            <img
+              src="img/hero.png"
+              alt="Plugin or script code plugged into InDesign"
+            />
+          </div>
+          <div
+            class="mx-auto -mt-5 overflow-hidden rounded-md bg-cgrey/60 p-10 text-center shadow-lg ring-1 ring-black/5 backdrop-blur-sm max-md:w-10/12 md:-ml-10 md:p-14 md:text-right lg:-ml-20 lg:p-20 xl:-ml-40"
+          >
+            <h1 class="h1 relative">
+              MAKSYMALIZUJ WYDAJNOŚĆ <br />
+              <span class="text-base-clamp-lg normal-case">
+                dzięki niestandardowym skryptom i wtyczkom Adobe InDesign
+              </span>
+            </h1>
+            <h2 class="mt-5">
+              Oszczędzaj czas i podnoś jakość swoich projektów dzięki potężnym
+              narzędziom automatyzującym, dostosowanym do Twoich potrzeb.
+            </h2>
+            <button class="cta mt-5">Umów się na bezpłatną konsultację</button>
+          </div>
+        </div>
+      </header>
+      <!-- MARK: about -->
+      <section id="omnie" class="mt-10 bg-cgrey px-4 py-10">
+        <div
+          class="mx-auto grid max-w-[1400px] items-center gap-10 md:grid-cols-[1fr_33%]"
+        >
+          <div>
+            <h2 class="h2">KIM JESTEM</h2>
+            <p class="">
+              Z ponad 20-letnim doświadczeniem jako specjalista ds.
+              projektowania graficznego i&nbsp;DTP oraz dodatkowymi
+              <script>
+                document.write(new Date().getFullYear() - 2021);
+              </script>
+              &nbsp;latami jako programista stron WWW, wnoszę unikalne
+              połączenie kreatywności i&nbsp;wiedzy technicznej. Moja podróż
+              przez świat projektowania przyniosła mi głębokie zrozumienie
+              wymagań branży, a&nbsp;moje umiejętności techniczne pozwalają mi
+              tworzyć niestandardowe skrypty i&nbsp;wtyczki, które usprawniają
+              i&nbsp;optymalizują procesy pracy w&nbsp;Adobe InDesign. Znajomość
+              najnowszych technik programowania WWW oraz doskonała znajomość
+              Adobe InDesign doskonale sprawdzają się&nbsp;przy tworzeniu
+              nowoczesnych rozszerzeń dla tego programu.
+            </p>
+            <a href="founder.html"
+              ><button class="primary mt-5">Dowiedz się więcej</button></a
+            >
+          </div>
+          <div
+            class="h-fit w-fit overflow-hidden rounded-md shadow-lg ring-1 ring-black/5"
+          >
+            <img
+              src="img/rafal_wlasciciel_deepforge.webp"
+              alt="Rafał Szewczak - właściciel DeepForge"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- MARK: services -->
+      <section id="uslugi" class="mt-10 px-4 py-10">
+        <div class="mx-auto max-w-[1400px]">
+          <h2 class="h2">USŁUGI</h2>
+          <p>Przegląd Usług</p>
+          <!-- container -->
+          <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
+            <!-- MARK: one -->
+            <div>
+              <h3 class="h3 mt-7">
+                Niestandardowe Skrypty i Wtyczki Adobe InDesign
+              </h3>
+              <p class="max-w-prose">
+                Specjalizuję się w tworzeniu niestandardowych skryptów i wtyczek
+                dla Adobe InDesign, które automatyzują powtarzające się zadania,
+                rozszerzają funkcjonalności oprogramowania i optymalizują
+                procesy projektowe. Moje rozwiązania są dostosowane do
+                indywidualnych potrzeb klientów, co pozwala na znaczne
+                oszczędności czasu, zwiększenie efektywności i poprawę jakości
+                projektów.
+              </p>
+              <button class="cta mt-5">Rezerwuj darmową konsultację</button>
+            </div>
+            <!-- MARK: two -->
+            <div>
+              <h3 class="h3">Zakres Usług:</h3>
+              <ul class="ml-4 list-disc space-y-2">
+                <li>
+                  <strong class="text-primary">Automatyzacja Procesów:</strong>
+                  Tworzenie skryptów automatyzujących codzienne zadania, co
+                  pozwala na skoncentrowanie się na kreatywnych aspektach pracy.
+                </li>
+                <li>
+                  <strong class="text-primary"
+                    >Rozszerzenie Funkcjonalności:</strong
+                  >
+                  Opracowywanie wtyczek dodających nowe funkcje do Adobe
+                  InDesign, dostosowanych do specyficznych potrzeb Twojego
+                  przepływu pracy.
+                </li>
+                <li>
+                  <strong class="text-primary">Integracja Danych:</strong>
+                  Łączenie Adobe InDesign z zewnętrznymi źródłami danych, co
+                  ułatwia pracę z dużymi ilościami informacji.
+                </li>
+                <li>
+                  <strong class="text-primary">Ekstrakcja Danych:</strong>
+                  Tworzenie skryptów umożliwiających ekstrakcję danych z wielu
+                  dokumentów Adobe InDesign, co pozwala na łatwe umieszczanie
+                  treści online i zarządzanie dużymi projektami wydawniczymi.
+                </li>
+                <li>
+                  <strong class="text-primary">Wsparcie i Aktualizacje:</strong>
+                  Ciągłe wsparcie techniczne oraz aktualizacje, zapewniające, że
+                  Twoje narzędzia są zawsze na bieżąco i działają bez zakłóceń.
+                  Zaufaj mojemu doświadczeniu i wiedzy, aby przekształcić swoje
+                  procesy projektowe i osiągnąć lepsze rezultaty w krótszym
+                  czasie. Skontaktuj się ze mną, aby dowiedzieć się więcej o
+                  tym, jak mogę pomóc Twojej firmie.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MARK: benefits -->
+      <section id="korzysci" class="mt-10 bg-cgrey px-4 py-10">
+        <div class="mx-auto max-w-[1400px]">
+          <h2 class="h2 my-10 text-center">KORZYŚCI</h2>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <div
+              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
+            >
+              <h3 class="h3">Redukcja Kosztów</h3>
+              <p>
+                Zredukuj pracę manualną i zwiększ wydajność, zyskując
+                długoterminowe oszczędności dzięki poprawie efektywności i
+                skróceniu czasu produkcji.
+              </p>
+            </div>
+            <div
+              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
+            >
+              <h3 class="h3 leading-tight">Zwiększona Jakość</h3>
+              <p>
+                Automatyzując powtarzające się zadania poprawisz jakość swoich
+                projektów poprzez wyeliminowanie ryzyka popełnienia błędów.
+              </p>
+            </div>
+
+            <div
+              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
+            >
+              <h3 class="h3">Spersonalizowane Rozwiązania</h3>
+              <p>
+                Otrzymuj narzędzia dostosowane do Twoich konkretnych potrzeb,
+                zapewniając płynną integrację z istniejącymi procesami i
+                zwiększając produktywność.
+              </p>
+            </div>
+            <div
+              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
+            >
+              <h3 class="h3">Ekspertyza i Doświadczenie</h3>
+              <p>
+                Skorzystaj z mojego 20-letniego doświadczenia w projektowaniu
+                graficznym i
+                <script>
+                  document.write(new Date().getFullYear() - 2021 + "-letniej");
+                </script>
+                ekspertyzy w programowaniu www, zapewniając sobie niezawodne i
+                wysokiej jakości rozwiązania.
+              </p>
+            </div>
+
+            <div
+              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
+            >
+              <h3 class="h3">Ciągłe Wsparcie</h3>
+              <p>
+                Uzyskaj dostęp do ciągłego wsparcia i aktualizacji, zapewniając,
+                że Twoje narzędzia pozostają skuteczne i na bieżąco z
+                najnowszymi funkcjami Adobe InDesign i trendami branżowymi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MARK: portfolio -->
+      <section id="portfolio" class="mt-10 px-4 py-10">
+        <div class="mx-auto max-w-[1400px]">
+          <h2 class="h2 mb-10">Przykłady skryptów</h2>
+          <!-- MARK: item1 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="1"
+              >
+                <h3 class="ml-4 font-bold text-primary">Tłumacz AI DeepL</h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="1"
+            >
+              <div class="overflow-hidden">
+                <strong>Problem:</strong>
+                Thomas potrzebuje przetłumaczyć zawartość wielu dokumentów .indd
+                za pomocą sztucznej inteligencji DeepL. Zależy mu na tym, aby
+                zachować formatowanie tekstu zastosowane w dokumentach.
+                Potrzebuje mieć także możliwość korzystania zarówno z darmowego
+                jak i płatnego trybu pracy DeepL
+                <h4 class="h4">Dane wejściowe:</h4>
+                <ul class="ml-8 list-disc">
+                  <li>dokumenty .indd</li>
+                </ul>
+                <h4 class="h4">Rozwiązanie:</h4>
+                Skrypt, który po uruchomieniu tłumaczy cały aktualnie otwarty
+                dokument InDesigna wg zadanych parametrów. Okno dialogowe
+                wyświetla informacje na temat aktualnie dostępnego limitu znaków
+                (płatnego lub darmowego) oraz szacowaną liczbę znaków w otwartym
+                dokumencie. Okno dialogowe daje również możliwość wybrania
+                języka źródłowego i docelowego.
+                <h4 class="h4">Dostarczono:</h4>
+                <ul>
+                  <li>skrypt</li>
+                  <li>
+                    plik konfiguracyjny w formacie JSON zawierający domyślne
+                    parametry trybu pracy DeepL oraz miejsce, w którym należy
+                    umieścić własny klucz API DeepL
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item2 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="2"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Generator markowych e-booków
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="2"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem:</h4>
+                <p>
+                  Irina przygotowała w InDesignie zestaw 5 e-booków w różnych
+                  wersjach językowych umieszczonych na oddzielnych warstwach.
+                  Potrzebuje szybkiego sposobu, żeby cały zestaw spersonalizować
+                  pod konkretnego klienta. Personalizacja ma obejmować:
+                </p>
+                <ul class="ml-8 list-disc">
+                  <li>
+                    podmianę logotypu umieszczonego w różnych miejscach
+                    (logotypy są w 2 wersjach dostosowanych do jasnego i
+                    ciemnego tła),
+                  </li>
+                  <li>
+                    zmianę wersji językowej dokumentu (poprzez zmianę
+                    widoczności odpowiednich warstw w dokumencie)
+                  </li>
+                  <li>zmianę głównego motywu kolorystycznego</li>
+                  <li>zaktualizowanie spisu treści</li>
+                </ul>
+                <p>
+                  Gotowe e-booki mają być w formacie PDF o określonych
+                  parametrach oraz mają mieć aktywny (klikalny) spis treści.
+                </p>
+                <h4 class="h4">Dane wejściowe:</h4>
+                <p>
+                  Folder z wzorcami e-booków (pliki .indd, .indb oraz pliki
+                  graficzne) Dla każdej spersonalizowanej wersji potrzeba:
+                </p>
+                <ul class="ml-8 list-disc">
+                  <li>2 logotypów w wersji ciemnej i jasnej,</li>
+                  <li>informacji o wersji językowej</li>
+                  <li>
+                    informacji o kolorze jaki ma być głównym motywem książek
+                  </li>
+                </ul>
+
+                <h4 class="h4">Rozwiązanie:</h4>
+                <p>
+                  Skrypt, który po uruchomieniu poprosi o podanie lokalizacji
+                  folderu z danymi wejściowymi a następnie wygeneruje e-booki.
+                </p>
+                <p>Folder z danymi wejściowymi musi zawierać:</p>
+                <ul class="ml-8 list-disc">
+                  <li>
+                    podfoldery z wzorcami książek, których nazwy muszą być w
+                    formacie [numer]_[nazwa] np. 123_book 1
+                  </li>
+                  <li>
+                    podfolder "Input" zawierający 1 lub więcej folder/ów z
+                    informacjami o personalizacji dla klienta/ów. Każdy z tych
+                    folderów:
+                    <ul class="list-inside [list-style-type:circle]">
+                      <li>
+                        musi mieć nazwę w formacie [nazwa]_[kod jezyka]_[kod HEX
+                        RGB koloru] np. Coca Cola_DE_fa7ca3
+                      </li>
+                      <li>
+                        musi zawierać 2 logotypy w formacie .png nazwane
+                        "dark.png" i "light.png"
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  Przed wygenerowaniem e-booków skrypt analizuje całość danych
+                  wejściowych i w przypadku błędów tworzy ich listę w pliku txt
+                  prosząc o ich skorygowanie.
+                </p>
+                <p>Skrypt sprawdza dane pod kątem:</p>
+                <ul class="list-inside list-disc">
+                  <li>
+                    kompletności wzorców (obecność plików .indd, indb oraz
+                    brakujących linków w tych plikach)
+                  </li>
+                  <li>kompletności i poprawności danych o personalizacji</li>
+                </ul>
+                <p>
+                  W przypadku braku błędów skrypt tworzy w podanym folderze
+                  podfolder "Output" zawierający gotowe e-booki.
+                </p>
+                <h4 class="h4">Dostarczono:</h4>
+                <ul class="list-inside list-disc">
+                  <li>skrypt</li>
+                  <li>
+                    instrukcja instalacji, obsługi, i sposobu przygotowania
+                    danych
+                  </li>
+                  <li>kilka folderów z przykładowymi danymi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item3 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="3"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Dodaj zaznaczenie do strony wzorcowej
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="3"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Rafał potrzebuje szybkiego sposobu na zaktualizowanie
+                  szablonów (stron wzorcowych) użytych w dokumencie. Chce
+                  dodawać do nich elementy bezpośrednio ze strony, którą
+                  aktualnie edytuje, gdyż przełączanie się na stronę wzorcową w
+                  tym celu może zakłócić jego proces twórczy. Dodatkowo trzeba
+                  potem wrócić na ostatnio edytowaną stronę, co w długich
+                  dokumentach jest trochę uciążliwe.
+                </p>
+                <h4 class="h4">Dane wejściowe</h4>
+                <ul class="list-inside list-disc">
+                  <li>dokument .indd</li>
+                </ul>
+
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Niewielki skrypt, który po uruchomieniu dodaje zaznaczony
+                  element/ty do szablonu, który jest użyty na aktualnie
+                  edytowanej stronie, co w rezultacie powoduje dodanie elementu
+                  do wszystkich stron, na których dany szablon był zastosowany.
+                </p>
+                <h4 class="h4">Dostarczono</h4>
+                <ul class="list-inside list-disc">
+                  <li>skrypt</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item4 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="4"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Generator kart imiennych
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="4"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Johann potrzebuje szybko stworzyć 1000+ kart imiennych ze
+                  zdjęciem i krótkim tekstem. Nie może wykorzystać wbudowanej
+                  funkcji InDesigna "Scalanie Danych" bo teksty, które mają być
+                  umieszczone na kartach mają różną długość i trzeba dopasować
+                  formatowanie tak, aby tekst się zmieścił
+                </p>
+                <h4 class="h4">Dane wejściowe</h4>
+                <ul class="list-inside list-disc">
+                  <li>Folder ze zdjęciami, które mają numer w nazwie</li>
+                  <li>
+                    specjalnie przygotowany przez Johanna plik excela
+                    zawierający dane w formacie: nr_zdjęcia;opis;imię_nazwisko
+                  </li>
+                </ul>
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Skrypt, który prosi o podanie lokalizacji danych wejściowych
+                  wyświetlając proste okno dialogowe a następnie generuje
+                  dokument. Johann może samodzielnie dostosować formatowanie
+                  tekstu modyfikując istniejące style w dostarczonym szablonie.
+                  Może także zmienić wygląd poszczególny elementów karty
+                  modyfikując elementy w dostarczonej bibliotece.
+                </p>
+                <h4 class="h4">Dostarczono:</h4>
+                <ul class="list-inside list-disc">
+                  <li>skrypt,</li>
+                  <li>szablon karty ze zdefiniowanymi stylami,</li>
+                  <li>
+                    biblioteka zawierająca elementy, których skrypt używa do
+                    generowania karty.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item5 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="5"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Generator wzornika kolorów
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="5"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Ron potrzebuje przygotować wzornik kolorów w programie
+                  InDesign. Ma to być ponad 300-stronnicowa książeczka
+                  zawierająca wzory ponad 2000 kolorów. Ręczne wykonanie jest
+                  możliwe ale bardzo pracochłonne i przede wszystkim bardzo
+                  podatne na pomyłki. Ron przygotował informacje o kolorach w
+                  formie pliku XML, który wygenerował w zewnętrznej
+                  specjalistycznej aplikacji oraz plik Excela z informacjami o
+                  tym jaki kolory umieścić na której stronie.
+                </p>
+
+                <h4 class="h4">Dane wejściowe</h4>
+                <ul class="list-inside list-disc">
+                  <li>szablon książki w pliku .indd</li>
+                  <li>XML z informacjami o kolorach</li>
+                  <li>
+                    CSV z informacjami o tym jakie kolory na której stronie
+                  </li>
+                </ul>
+
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Skrypt, który po uruchomieniu generuje wzornik kolorów na
+                  podstawie określonego przez Rona szablonu.
+                </p>
+
+                <h4 class="h4">Dostarczono</h4>
+                <p>
+                  Gotowe wzorniki w formacie PDF i pliki .indd zgodnie z
+                  zamówieniem.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item6 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="6"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Wielofunkcyjny plugin do czyszczenia dokumentów
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="6"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Benjamin przetwarza rocznie około 1000 dokumentów InDesigna
+                  rocznie. Są to ulotki informacyjne lub reklamy. Jego praca
+                  polega na przygotowaniu dokumentów do tłumaczenia na inne
+                  języki na zewnętrznej platwormie, która przetwarza pliki
+                  automatycznie.
+                </p>
+                <p>
+                  Aby dokumenty zostały przetworzone poprawnie muszą spełniać
+                  szereg wymagań. Dokumenty, którymi się zajmuje można podzielić
+                  na 2 kategorie ze względu na sposób przetwarzania:
+                </p>
+                <ul class="list-inside list-disc">
+                  <li>master - dokumenty źródłowe</li>
+                  <li>
+                    local - dokumenty już przetłumaczone ale nadal zawierające
+                    błędy W zależności od rodzaju dokumentu trzeba wykonać różne
+                    czynności.
+                  </li>
+                </ul>
+                <p>Dokumenty "master" wymagają:</p>
+                <ul class="list-inside list-disc">
+                  <li>
+                    skonwertowania załączonych grafik do formatu jpg lub png
+                    oraz zmniejszenia ich rozdzielczości w razie potrzeby aby
+                    nie zajmowały zbyt dużo miejsca na platformie
+                  </li>
+                  <li>
+                    naprawienia brakujących linków; funkcja ta ma dodatkowo
+                    zmienić nazwy wszystkich plików na numery kolejne, aby
+                    zapobiec zerwaniu linku podczas dalszego przetwarzania na
+                    platformie
+                  </li>
+                  <li>
+                    naprawienia uciętych tekstów (nie mieszczących się w
+                    ramkach)
+                  </li>
+                  <li>
+                    dodania wszystkich kolorów użytych w dokumencie do panelu
+                    "Próbki" w InDesignie poprzez ich nazwanie w określony
+                    sposób
+                  </li>
+                  <li>
+                    usunięcia wszystkich obecnych w dokumencie tagów XML oraz
+                    zapisania dokumentu
+                  </li>
+                </ul>
+                <p>Dokumenty "local" dodatkowo wymagają:</p>
+                <ul class="list-inside list-disc">
+                  <li>
+                    naprawienia brakujących znaków diakrytycznych poprawienia
+                    widoczności tekstu w kolorze czarnym, który jest umieszczony
+                    na ciemnym tle
+                  </li>
+                </ul>
+                <p>
+                  Benjamin jest byłym programistą i z pomocą chat GPT
+                  przygotował skrypty znacznie ułatwiające mu pracę, ale nie
+                  jest do końca z nich zadowolony. Chciałby je scalić w jedno
+                  rozwiązanie i poprawić ich działanie oraz rozszerzyć o
+                  dodatkowe funkcje. Bardzo zależy mu na ergonomii i
+                  profesjonalnym wyglądzie dostarczonego rozwiązania, bo chce
+                  aby korzystali z niego także inni.
+                </p>
+
+                <h4 class="h4">Dane wejściowe</h4>
+                <ul class="list-inside list-disc">
+                  <li>pliki .indd</li>
+                </ul>
+
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Plugin UXP z własnym panelem integrujący się w interfejs
+                  użytkownika programu InDesign. Pozwala on wybrać rodzaj
+                  dokumentu lub dokumentów, które będą przetwarzane (master lub
+                  local), zakres plików, które będą przetworzone (aktywny
+                  dokument lub wszystkie otwarte dokumenty) oraz zakres zmian,
+                  jakie mają zostać wykonane na wybranych dokumentach. Po
+                  kliknięciu przycisku "Run checks" plugin przetwarza dokumenty.
+                </p>
+                <p>
+                  Wszystkie ewentualne błędy lub informacje o tym, że dany
+                  dokument nadal wymaga manualnej edycji są zapisywane w pliku
+                  tekstowym aby nie przerywać pracy oknami dialogowymi. Po
+                  zakończeniu przetwarzania plugin wyświetla informację o
+                  bezbłędnym przebiegu lub wystąpionych błędach odsyłając po
+                  szczegóły do ww. pliku.
+                </p>
+                <p>
+                  W trybie "local" plugin wyświetla 2 dodatkowe opcje możliwych
+                  modyfikacji. Jedną z nich jest możliwość przeskanowania
+                  dokumentu pod kątem niewidzialnych czarnych napisów.
+                </p>
+                <p>
+                  W przypadku, gdy zostaną wykryte informacja o tym jest
+                  umieszczana w logu tekstowym. Użytkownik może następnie
+                  skorygować tego typu błędy w trybie półautomatycznym, który
+                  polega na tym, że po kliknięciu przycisku "Find Invisible
+                  Black Texts" plugin wyszukuje wszystkie tego typu błędy w
+                  aktualnie otwartym dokumencie i za pomocą przycisków "Prev"
+                  "Next" pozwala je lokalizować w dokumencie robiąc zbliżenie i
+                  zaznaczając daną ramkę tekstową. Użytkownik może szybko nadać
+                  tekstowi w ramce jeden z 4 zdefiniowanych wcześniej przez
+                  Benjamina kolorów lub za pomocą przycisku "Select text"
+                  zaznaczyć tekst w ramce, aby nadać mu dowolny kolor z palety.
+                </p>
+                <p>
+                  Dodatkowo plugin dostosowuje swój wygląd do aktualnie
+                  wybranego w InDesignie motywu kolorystycznego.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item 7 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="7"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Generator wykazu lokalnych imprez
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="7"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Cruisin' News potrzebuje sposobu na uzyskanie ich kalendarza
+                  lokalnych wydarzeń publikowanego online w formie dokumentu
+                  InDesign. Ręczne tworzenie dokumentu jest bardzo czasochłonne,
+                  żmudne i podatne na pomyłki. Mają dane w bazie, z której mogą
+                  korzystać w dowolny sposób. Dane przed ułożeniem w szablon
+                  muszą być uprzednio przetworzone według zaleceń klienta
+                  (grupowanie i oczyszczenie z niepotrzebnych treści), a
+                  następnie sformatowane w ściśle określony sposób, który będzie
+                  łatwy do edytowania.
+                </p>
+
+                <h4 class="h4">Dane wejściowe</h4>
+                <ul class="list-inside list-disc">
+                  <li>plik XML wygenerowany w zewnętrznej aplikacji</li>
+                </ul>
+
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Skrypt, który po uruchomieniu prosi o lokalizację pliku XML z
+                  danymi a następnie generuje kalendarz w programie InDesign.
+                  Skrypt korzysta z szablonu ze zdefiniowanymi stylami tekstu,
+                  które można łatwo zmienić.
+                </p>
+
+                <h4 class="h4">Dostarczono:</h4>
+                <ul class="list-inside list-disc">
+                  <li>skrypt</li>
+                  <li>
+                    pusty szablon kalendarza ze zdefiniowanymi wszystkimi
+                    stylami tekstu w formie pliku .indd
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item 8 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="8"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Narzędzie do łączenia PDF-ów
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="8"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Victoria ma dwa dokumenty PDF (dokument A i dokument B) i
+                  potrzebuje je scalić w jeden w ten sposób, że strony z każdego
+                  z dokumentów są umieszczone w nowym dokumencie naprzeniennie
+                  (strony z dokumentu A na stronach parzystych w nowym
+                  dokumencie a strony z dokumentu B na nieparzystych). Dodatkowo
+                  strony z dokumentu A trzeba obrócić o 90 stopni.
+                </p>
+                <h4 class="h4">Dane wejściowe:</h4>
+                <p>
+                  2 pliki PDF z taką samą ilością stron z informacjami
+                  umieszczonymi w takiej samej kolejności.
+                </p>
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Krótki skrypt, który prosi o lokalizację obu dokumentów PDF a
+                  następnie generuje nowy dokument indesign na ich podstawie.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item 9 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="9"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Narzędzie do aktualizowania dokumentów
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="9"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Adam ma setki specyfikacji produktów wykonanych w formie
+                  plików InDesigna. Wszystkie mają jednakową stopkę z danymi
+                  firmowymi, która jest wykonana jako odzielny plik .indd i
+                  podlinkowana we wszystkich specyfikacjach. Po każdorazowej
+                  zmianie danych firmowych w stopce musi odświeżyć link do
+                  stopki w każdym z dokumentów i wygenerować na nowo plik PDF.
+                  To czasochłonne i nudne zadanie i Adam chciałby to zrobić
+                  automatycznie. Adam chce mieć możliwość kontrolowania
+                  czynności, które wykona skrypt: aktualizacja linków w plikach
+                  zapisanie zmienionego pliku wyeksportowanie do PDF opcjonalne
+                  przetwarzanie plików w podfolderach Adam chce także mieć
+                  możliwość wyboru predefiniowanych ustawień eksportu pliku PDF.
+                </p>
+
+                <h4 class="h4">Dane wejściowe</h4>
+                <ul class="list-inside list-disc">
+                  <li>
+                    całe drzewo folderów zawierających specyfikacje produktów w
+                    plikach .indd
+                  </li>
+                </ul>
+
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Skrypt, który po uruchomieniu wyświetla okno dialogowe dające
+                  możliwość wybrania folderu ze specyfikacjami i wybrania opcji
+                  dotyczących sposobu działania.
+                </p>
+
+                <h4 class="h4">Dostarczono</h4>
+                <ul class="list-inside list-disc">
+                  <li>skrypt</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item 10 -->
+          <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="10"
+              >
+                <h3 class="ml-4 font-bold text-primary">
+                  Narzędzie do ekstrakcji danych .indd => XML
+                </h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="10"
+            >
+              <div class="overflow-hidden">
+                <h4 class="h4">Problem</h4>
+                <p>
+                  Stanley ma 3304 artykuły stworzone w InDesignie i potrzebuje
+                  je wszystkie przenieść online. Otrzymał informację, że
+                  potrzebuje treści zawartych w tych artykułach w formie plików
+                  XML. Dodatkowo nie wszyskie informacje zawarte w plikach .indd
+                  mają się znaleźć w wynikowych plikach XML. Chce aby została
+                  pominięta część tekstów sformatowana określonymi stylami,
+                  określoną wielkością pisma lub kombinacją obu. Artykuły są
+                  napisane w dwóch wersjach językowych i dodatkowo trzeba to
+                  rozdzielić do osobnych plików według języka. Teoretycznie
+                  wersje językowe powinny być oznaczone stylami akapitowymi
+                  oznaczającymi język, w jakim są napisane, ale w praktyce
+                  często tak nie jest i nie można na tym polegać w 100%.
+                  Dodatkowym wymogiem jest dodanie w pliku XML ściśle
+                  określonego identyfikatora. Identyfikatory ma w przygotowanym
+                  wcześniej pliku CSV zawierającym dane w formacie TYTUŁ
+                  ARTYKUŁU;ID. Trzeba identyfikatory przyporządkować na
+                  podstawie tytułu. Tutaj także pojawia się problem ponieważ
+                  tytuły w pliku CSV nie zawsze dokładnie odpowiadają temu, co
+                  znajduje się w plikach .indd. Ponadto występuje problem z
+                  różnym kodowaniem znaków specjalnych w CSV i .indd. Różne
+                  partie plików .indd są przygotowane w nieco odmienny sposób i
+                  potrzebna jest także możliwość wybrania sposobu w jaki skrypt
+                  ma te dane przetworzyć dla uzyskania najlepszych wyników.
+                  Stanley próbował samodzielnie stworzyć skrypt z pomocą chat
+                  GPT, ale nie uzyskał zadawalających wyników i stracił dużo
+                  czasu danego mu przez klienta na wykonanie zlecenia, co
+                  spowodowało, że potrzebuje chociaż części tych danych XML "na
+                  wczoraj".
+                </p>
+
+                <h4 class="h4">Dane wejściowe</h4>
+                <ul class="list-inside list-disc">
+                  tysiące plików .indd CSV z identyfikatorami
+                </ul>
+
+                <h4 class="h4">Rozwiązanie</h4>
+                <p>
+                  Rozbudowany skrypt, który po uruchomieniu wyświetla okno
+                  dialogowe pozwalające wybrać algorytm pracy skryptu i generuje
+                  pliki XML na podstawie plików umieszczonych w określonym
+                  folderze oraz danego pliku CSV. Do rozpoznania języka w jakim
+                  napisane są treści skrypt używa sztucznej inteligencji DeepL,
+                  natomiast do bardziej skutecznego wyszukania identyfikatora na
+                  podstawie tytułu skrypt używa m.in. algorytmu "Odległość
+                  Levenshteina" uprzednio korygując kodowanie znaków
+                  specjalnych. Głównym silnikiem skryptu jest wbudowany w
+                  InDesignie mechanizm przetwarzania danych XML, który dba o ich
+                  poprawność i pozwala korzystać z technologii XSLT do
+                  modyfikowania sposobu, w jaki treści mają być przetwarzane.
+                  Dodatkowo skrypt posiada zaawansowany system obsługi błędów
+                  informujący użytkownika w czytelny sposób o zaistniałym
+                  problemie (problemy z połączeniem DeepL, odczytem plików
+                  itp.). Pierwszą uproszczoną wersję skryptu (bez obsługi
+                  błędów, DeepL i algorytmu Levenshteina) Stanley otrzymał już
+                  po kilku dniach. Wersja ta jednak generowała pliki XML
+                  wymagające manualnej korekty. Stanley otrzymał wsparcie
+                  dotyczące jak to robić i jakiego oprogramowania użyć dla
+                  możliwie najszybszego i zadawalającego efektu. Dostarczony
+                  przez Stanleya własny skrypt wygenerowany przez chat GPT
+                  niestety okazał się przydatny tylko w niewielkim stopniu a
+                  próby jego naprawy spowodowały dodatkowe niepotrzebne
+                  opóźnienie.
+                </p>
+
+                <h4 class="h4">Dostarczono</h4>
+                <ul class="list-inside list-disc">
+                  <li>skrypt UXP</li>
+                  <li>
+                    szablony XSLT definiujące przetwarzanie plików XML dla obu
+                    wersji językowych
+                  </li>
+                  <li>
+                    szerokie wsparcie dotyczące całego procesu przetwarzania
+                    danych i rozwiązywania ewentualnych problemów
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MARK: item temp -->
+          <!-- <div class="overflow-hidden rounded ring-1 ring-primary/50">
+            <div class="rounded bg-cgrey">
+              <button
+                class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
+                data-accordionbutton="7"
+              >
+                <h3 class="ml-4 font-bold text-primary">title3</h3>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  class="fill-text transition-transform duration-500"
+                >
+                  <use href="#arrowdown" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="grid grid-rows-[0fr] transition-all duration-500"
+              data-accordionbody="7"
+            >
+              <div class="overflow-hidden">desc3</div>
+            </div>
+          </div> -->
+        </div>
+        <!-- Portfolio Section Showcase Projects: Display examples of previous work,
+        including screenshots and descriptions of scripts and plugins you've
+        developed. Case Studies: Detailed case studies demonstrating how your
+        solutions have helped clients achieve their goals. Client Logos: Logos
+        of companies you’ve worked with to build credibility. -->
+      </section>
+      <section id="testimonials"></section>
+      <!-- MARK: contact -->
+      <section id="contact" class="mb-2 w-full bg-cgrey px-4 py-7">
+        <div class="mx-auto max-w-[1400px]">
+          <h2
+            class="mb-2 text-center text-xl font-bold text-primary md:text-2xl lg:text-3xl xl:text-5xl"
+          >
+            Masz pytania?
+          </h2>
+          <p class="mb-7 text-center font-light md:text-lg">
+            Zajrzyj do
+            <a
+              href="faq.html"
+              class="underline underline-offset-2 hover:font-bold hover:text-primary"
+              >FAQ</a
+            >. Na pozostałe pytania chętnie odpowiem w ciągu 24h.
+          </p>
+          <address
+            class="flex flex-wrap gap-5 rounded-2xl bg-white p-[10px] not-italic"
+          >
+            <div class="grid w-full gap-[10px] md:w-fit">
+              <div class="flex gap-3 rounded-[10px] bg-cgrey p-6">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  class="fill-primary"
+                >
+                  <use href="#addresslocationpin"></use>
+                </svg>
+                <div class="grid flex-1 justify-between">
+                  <p class="text-xs font-light">Adress:</p>
+                  <p class="text-sm text-primary">Drążdżewo, Polska</p>
+                </div>
+              </div>
+              <div class="flex gap-3 rounded-[10px] bg-cgrey p-6">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  class="fill-primary"
+                >
+                  <use href="#addressmail"></use>
+                </svg>
+                <div class="grid flex-1 justify-between">
+                  <p class="text-xs font-light">Email:</p>
+                  <a
+                    href="mailto:contact@agrastone.com"
+                    class="text-sm text-primary"
+                    >firmowy@email.pl</a
+                  >
+                </div>
+              </div>
+              <div class="flex gap-3 rounded-[10px] bg-cgrey p-6">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  class="fill-primary"
+                >
+                  <use href="#addresstelephone"></use>
+                </svg>
+                <div class="grid flex-1 justify-between">
+                  <p class="text-xs font-light">Zadzwoń:</p>
+                  <a href="tel:+48507722219" class="text-sm text-primary"
+                    >+48 507 722 219</a
+                  >
+                </div>
+              </div>
+              <div class="flex gap-7">
+                <div
+                  class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
+                >
+                  <svg
+                    width="18"
+                    height="21"
+                    viewBox="0 0 18 21"
+                    class="fill-primary"
+                  >
+                    <use href="#facebook"></use>
+                  </svg>
+                </div>
+                <div
+                  class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
+                >
+                  <svg
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 19"
+                    class="fill-primary"
+                  >
+                    <use href="#instagram"></use>
+                  </svg>
+                </div>
+                <div
+                  class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
+                >
+                  <svg
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 19"
+                    class="fill-primary"
+                  >
+                    <use href="#linkedin"></use>
+                  </svg>
+                </div>
+                <div
+                  class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
+                >
+                  <svg
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 18"
+                    class="fill-primary"
+                  >
+                    <use href="#behance"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <form class="mt-11 grid flex-1">
+              <div class="relative h-11 w-full min-w-[200px]">
+                <input
+                  placeholder="Imię i nazwisko*"
+                  class="disabled:bg-blue-gray-50 peer h-full w-full border-b border-[#E6E8EB] bg-transparent pb-1.5 pt-4 text-sm text-primary outline outline-0 transition-all placeholder:font-light placeholder:opacity-0 placeholder-shown:border-[#E6E8EB] focus:border-primary focus:outline-0 focus:placeholder:opacity-100 disabled:border-0"
+                />
+                <label
+                  class="after:content[''] pointer-events-none absolute -top-1.5 left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-light leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#697484] peer-focus:after:scale-x-100 peer-focus:after:border-primary peer-disabled:text-transparent"
+                >
+                  Imię i nazwisko*
+                </label>
+              </div>
+              <div class="relative h-11 w-full min-w-[200px]">
+                <input
+                  placeholder="Email*"
+                  class="disabled:bg-blue-gray-50 peer h-full w-full border-b border-[#E6E8EB] bg-transparent pb-1.5 pt-4 text-sm text-primary outline outline-0 transition-all placeholder:font-light placeholder:opacity-0 placeholder-shown:border-[#E6E8EB] focus:border-primary focus:outline-0 focus:placeholder:opacity-100 disabled:border-0"
+                />
+                <label
+                  class="after:content[''] pointer-events-none absolute -top-1.5 left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-light leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#697484] peer-focus:after:scale-x-100 peer-focus:after:border-primary peer-disabled:text-transparent"
+                >
+                  Email*
+                </label>
+              </div>
+              <div class="relative h-11 w-full min-w-[200px]">
+                <textarea
+                  placeholder="Wiadomość*"
+                  rows="4"
+                  class="disabled:bg-blue-gray-50 peer w-full resize-none border-b border-[#E6E8EB] bg-transparent pb-1.5 pt-4 text-sm text-primary outline outline-0 transition-all placeholder:font-light placeholder:opacity-0 placeholder-shown:border-[#E6E8EB] focus:border-primary focus:outline-0 focus:placeholder:opacity-100 disabled:border-0"
+                ></textarea>
+                <label
+                  class="after:content[''] pointer-events-none absolute -top-1.5 left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-light leading-tight text-gray-500 transition-all after:absolute after:-bottom-16 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#697484] peer-focus:after:scale-x-100 peer-focus:after:border-primary peer-disabled:text-transparent"
+                >
+                  Wiadomość*
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="group mt-7 flex items-center justify-center gap-3 self-end rounded border border-primary bg-primary p-3 px-10 text-lg text-white hover:bg-white hover:text-primary md:justify-self-end"
+              >
+                Wyślij
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-white group-hover:fill-primary"
+                >
+                  <use href="#submitarrow"></use>
+                </svg>
+              </button>
+            </form>
+          </address>
+        </div>
+      </section>
+    </article>
+
+    <!-- MARK: footer -->
+    <footer class="bg-primary px-4">
+      <nav
+        aria-label="footer navigation"
+        class="mx-auto max-w-[1400px] py-7 md:grid md:grid-cols-[70%_1fr]"
+      >
+        <ul class="gap-7 space-y-7 text-lg text-white md:flex md:space-y-0">
+          <li><a href="#">Czemu DeepForge</a></li>
+          <li><a href="founder.html">O mnie</a></li>
+          <li><a href="#uslugi">Usługi</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <div
+          class="mt-7 flex w-full items-center justify-between justify-self-end md:mt-0 md:max-w-[152px]"
+        >
+          <a href="#">
+            <svg viewBox="0 0 24 24" class="w-12 fill-white md:w-6">
+              <use href="#facebookfilled" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 18 19" class="w-12 fill-white md:w-6">
+              <use href="#linkedin" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 18 18" class="w-12 fill-white md:w-6">
+              <use href="#behance" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 18 19" class="w-12 fill-white md:w-6">
+              <use href="#instagram" />
+            </svg>
+          </a>
+        </div>
+        <div class="col-span-2 row-start-3">
+          <hr class="mt-7 w-full border border-white" />
+          <p class="ml-3 mt-3 text-sm text-secondary">
+            &copy; 2024. All rights reserved.
+          </p>
+        </div>
+        <div
+          class="col-span-1 col-start-2 mt-10 flex items-center justify-between gap-6 text-sm text-secondary md:justify-end"
+        >
+          <span><a href="#">Warunki świadczenia usług</a></span>
+          <span><a href="#">Polityka prywatności</a></span>
+        </div>
+      </nav>
+    </footer>
+    <!-- MARK: SVGS -->
+
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+      <!-- MARK: logo -->
+      <symbol
+        id="logo"
+        shape-rendering="geometricPrecision"
+        fill-rule="evenodd"
+        viewBox="0 0 5143 1692"
+      >
+        <path
+          d="M1190 994c51,-9 169,20 169,-101 0,-55 -7,-165 -18,-220 -32,-173 -65,-267 -160,-409 -76,-113 -185,-182 -308,-228 -170,-65 -399,-37 -559,41 -97,62 -182,125 -237,232 -65,128 -87,235 -72,390 8,82 48,206 101,270 57,69 90,94 164,137 65,34 149,48 227,42 59,-6 82,-11 117,-14 -13,42 -66,122 -90,165 -40,73 -28,201 11,260 19,29 30,47 53,74 60,60 53,55 99,-4 49,-64 103,-160 149,-229 31,-44 29,-34 93,-34 185,-1 262,26 262,-118 0,-52 -3,-217 1,-253zm629 682l-234 0 0 -695 565 0 0 177 -331 0 0 119 290 0 0 177 -290 0 0 222zm765 16c-56,0 -108,-9 -156,-27 -48,-18 -90,-43 -125,-76 -35,-33 -62,-71 -82,-116 -20,-44 -29,-93 -29,-145 0,-53 10,-101 30,-145 20,-44 47,-82 82,-115 35,-33 76,-59 124,-76 48,-18 100,-27 156,-27 57,0 109,9 157,27 48,18 89,43 124,76 35,33 62,72 82,115 20,44 30,92 30,145 0,52 -10,101 -29,145 -20,44 -47,83 -82,116 -35,33 -76,58 -124,76 -48,18 -100,27 -157,27zm-1 -190c23,0 43,-4 62,-12 19,-8 35,-19 50,-34 14,-15 25,-33 33,-55 8,-22 12,-46 12,-73 0,-27 -4,-51 -12,-73 -8,-22 -19,-40 -33,-55 -14,-15 -31,-26 -49,-34 -19,-8 -39,-12 -62,-12 -22,0 -42,4 -61,12 -19,8 -35,19 -50,34 -14,15 -25,33 -33,55 -8,22 -12,46 -12,73 0,27 4,51 12,73 8,22 19,40 33,55 14,15 31,26 49,34 19,8 39,12 61,12zm479 174l0 -695 335 0c65,0 121,11 168,32 47,21 84,51 110,91 26,39 39,86 39,140 0,54 -13,100 -39,139 -23,34 -53,61 -92,81l146 214 -250 0 -118 -175 -64 0 0 175 -234 0zm234 -352l85 0c32,0 56,-7 72,-22 16,-15 23,-34 23,-60 0,-25 -8,-45 -23,-60 -16,-15 -40,-22 -72,-22l-85 0 0 163zm866 368c-56,0 -108,-9 -155,-26 -47,-18 -88,-43 -123,-75 -35,-32 -62,-71 -81,-115 -19,-44 -29,-93 -29,-147 0,-54 10,-103 29,-147 19,-44 46,-83 81,-115 35,-32 77,-57 125,-75 48,-18 101,-26 158,-26 69,0 130,12 184,35 54,23 98,56 134,99l-150 132c-22,-25 -46,-44 -71,-57 -25,-13 -54,-19 -85,-19 -26,0 -49,4 -70,12 -21,8 -39,20 -53,35 -15,15 -26,33 -34,55 -8,21 -12,45 -12,73 0,26 4,49 12,71 8,22 19,40 34,55 15,15 32,27 52,35 20,8 43,12 68,12 29,0 58,-6 85,-16l0 -176 204 0 0 294c-42,28 -91,50 -145,66 -54,15 -107,23 -158,23zm634 -193l348 0 0 177 -578 0 0 -695 565 0 0 177 -335 0 0 81 294 0 0 169 -294 0 0 91zm-3220 -801l0 -695 293 0c74,0 140,15 196,44 57,29 101,70 132,122 31,52 47,113 47,182 0,69 -16,129 -47,182 -31,52 -76,93 -132,122 -57,29 -122,44 -196,44l-293 0zm99 -86l188 0c58,0 107,-11 150,-33 42,-22 75,-52 98,-92 23,-39 35,-85 35,-137 0,-52 -12,-98 -35,-137 -23,-39 -56,-70 -98,-91 -42,-22 -92,-33 -150,-33l-188 0 0 522zm1099 -308l349 -1 -1 83 -348 1 0 226 406 -1 0 86 -505 0 1 -695 490 0 0 85 -391 1 0 215zm944 309l406 -1 0 86 -505 0 1 -695 490 0 0 85 -391 1 0 215 349 -1 -1 83 -348 1 0 226zm846 85l0 -695 271 0c61,0 113,10 156,29 43,19 76,47 99,83 23,36 35,80 35,130 0,50 -12,94 -35,130 -23,36 -56,64 -99,83 -43,20 -95,29 -156,29l-172 0 0 211 -99 0zm99 -297l169 0c64,0 112,-14 145,-41 33,-27 49,-66 49,-115 0,-50 -16,-88 -49,-115 -33,-27 -81,-41 -145,-41l-169 0 0 312zm-4235 -103c20,-13 38,-23 60,-31 65,-24 143,-33 212,-23 48,7 103,23 143,50 31,21 60,46 78,80 23,45 22,97 -7,137l-24 30 -52 50c-18,16 -50,37 -48,54 3,25 52,26 77,20 16,-4 23,-10 33,-18 38,-29 154,-128 174,-183 32,-89 7,-164 -49,-232 -43,-52 -98,-80 -158,-108 -74,-34 -186,-43 -262,-41 -49,3 -94,9 -143,23 -162,47 -320,179 -259,358 13,39 52,79 82,107 28,26 62,53 94,76 18,15 56,40 76,53 37,25 119,76 161,98l61 37c24,16 47,31 71,48 12,9 24,19 34,30 21,24 3,36 -21,47 -21,9 -55,16 -79,17 -31,2 -64,3 -95,-1 -33,-4 -79,-16 -92,-37 -4,-20 13,-32 27,-44 8,-7 23,-12 16,-21 -14,-19 -63,-14 -81,4 -6,6 -26,25 -29,32 -3,5 -4,8 -4,14 -2,17 10,26 25,35 27,17 65,26 97,32 52,9 106,9 160,5 29,-2 63,-9 89,-17 22,-7 58,-22 69,-44 16,-33 -100,-113 -136,-137l-65 -41c-32,-20 -94,-63 -123,-86 -52,-41 -112,-86 -155,-136 -73,-85 -49,-176 44,-236zm130 516c-10,-1 -22,-2 -33,0 -41,7 -24,42 44,31 35,-6 12,-28 -11,-30zm232 -80c28,-11 22,-52 -55,-36 -7,1 -17,5 -22,9 -35,28 42,41 77,27z"
+        />
+      </symbol>
+      <!-- MARK: polish flag -->
+      <symbol id="polflag" viewBox="0 0 8 5">
+        <rect width="8" height="5" fill="#dc143c" />
+        <rect width="8" height="2.5" fill="#fff" />
+      </symbol>
+      <!-- MARK: gbflag -->
+      <symbol
+        id="gbflag"
+        width="25"
+        height="20"
+        viewBox="0 0 25 20"
+        fill="none"
+      >
+        <rect y="0.5" width="25" height="19" rx="2" fill="white" />
+        <mask
+          id="mask0_222_572"
+          style="mask-type: luminance"
+          maskUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="25"
+          height="20"
+        >
+          <rect y="0.5" width="25" height="19" rx="2" fill="white" />
+        </mask>
+        <g mask="url(#mask0_222_572)">
+          <rect y="0.5" width="25" height="19" fill="#0A17A7" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M-1.14503 -1.32062L9.52384 6.33619V-0.76666H15.4762V6.33619L26.1451 -1.32062L27.4765 0.779613L19.0413 6.83334H25V13.1667H19.0413L27.4765 19.2204L26.1451 21.3206L15.4762 13.6638V20.7667H9.52384V13.6638L-1.14503 21.3206L-2.47644 19.2204L5.95873 13.1667H3.29018e-05V6.83334H5.95873L-2.47644 0.779611L-1.14503 -1.32062Z"
+            fill="white"
+          />
+          <path
+            d="M16.6678 6.51556L27.9762 -1.40002"
+            stroke="#DB1F35"
+            stroke-width="0.666667"
+            stroke-linecap="round"
+          />
+          <path
+            d="M17.8685 13.5126L28.0059 20.7828"
+            stroke="#DB1F35"
+            stroke-width="0.666667"
+            stroke-linecap="round"
+          />
+          <path
+            d="M7.14785 6.49497L-3.42627 -1.0874"
+            stroke="#DB1F35"
+            stroke-width="0.666667"
+            stroke-linecap="round"
+          />
+          <path
+            d="M8.29473 13.4247L-3.42627 21.6949"
+            stroke="#DB1F35"
+            stroke-width="0.666667"
+            stroke-linecap="round"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 11.9H10.7143V19.5H14.2857V11.9H25V8.1H14.2857V0.5H10.7143V8.1H0V11.9Z"
+            fill="#E6273E"
+          />
+        </g>
+      </symbol>
+      <!-- MARK: arrowdown -->
+      <symbol id="arrowdown" width="12" height="8" viewBox="0 0 12 8">
+        <path
+          d="M5.99998 5.09085L10.6667 0L12 1.45453L5.99998 8L0 1.45453L1.33334 0L5.99998 5.09085Z"
+        />
+      </symbol>
+      <!-- MARK: addresslocationpin -->
+      <symbol
+        id="addresslocationpin"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="4" />
+        <path
+          d="M26.0001 12.4799C24.4088 10.8886 22.2505 9.99463 20.0001 9.99463C17.7496 9.99463 15.5914 10.8886 14.0001 12.4799C12.4088 14.0712 11.5148 16.2295 11.5148 18.4799C11.5148 20.7303 12.4088 22.8886 14.0001 24.4799L19.2701 29.7599C19.363 29.8536 19.4736 29.928 19.5955 29.9788C19.7173 30.0296 19.848 30.0557 19.9801 30.0557C20.1121 30.0557 20.2428 30.0296 20.3646 29.9788C20.4865 29.928 20.5971 29.8536 20.6901 29.7599L26.0001 24.4299C27.5847 22.8452 28.4749 20.696 28.4749 18.4549C28.4749 16.2139 27.5847 14.0646 26.0001 12.4799ZM24.5701 22.9999L20.0001 27.5899L15.4301 22.9999C14.5272 22.0962 13.9125 20.9452 13.6637 19.6922C13.415 18.4392 13.5432 17.1407 14.0324 15.9606C14.5215 14.7805 15.3495 13.772 16.4117 13.0624C17.4739 12.3528 18.7226 11.9741 20.0001 11.9741C21.2775 11.9741 22.5262 12.3528 23.5884 13.0624C24.6506 13.772 25.4786 14.7805 25.9677 15.9606C26.4569 17.1407 26.5851 18.4392 26.3364 19.6922C26.0876 20.9452 25.4729 22.0962 24.5701 22.9999ZM17.0001 15.4099C16.1928 16.2197 15.7394 17.3165 15.7394 18.4599C15.7394 19.6033 16.1928 20.7001 17.0001 21.5099C17.5998 22.1107 18.3636 22.521 19.1957 22.6893C20.0278 22.8576 20.891 22.7765 21.6771 22.4561C22.4632 22.1356 23.1372 21.5902 23.6145 20.8882C24.0918 20.1861 24.3512 19.3588 24.3601 18.5099C24.3646 17.9431 24.2554 17.3812 24.039 16.8573C23.8225 16.3334 23.5033 15.8583 23.1001 15.4599C22.7037 15.0545 22.2311 14.7314 21.7095 14.5094C21.1878 14.2873 20.6274 14.1706 20.0605 14.1659C19.4935 14.1613 18.9313 14.2688 18.406 14.4823C17.8808 14.6958 17.403 15.011 17.0001 15.4099ZM21.6901 20.0899C21.3111 20.4747 20.8103 20.7158 20.2732 20.7722C19.7361 20.8285 19.1961 20.6966 18.7456 20.3988C18.295 20.1011 17.9618 19.6562 17.8031 19.14C17.6443 18.6238 17.6697 18.0685 17.875 17.5691C18.0803 17.0696 18.4528 16.6569 18.9286 16.4016C19.4045 16.1464 19.9543 16.0643 20.484 16.1695C21.0137 16.2747 21.4904 16.5607 21.8326 16.9784C22.1748 17.3962 22.3612 17.9199 22.3601 18.4599C22.3455 19.0772 22.0865 19.6634 21.6401 20.0899H21.6901Z"
+          fill="white"
+        />
+      </symbol>
+      <!-- MARK: addressmail -->
+      <symbol
+        id="addressmail"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="4" />
+        <path
+          d="M29 11C29.5523 11 30 11.4477 30 12V28.0066C30 28.5552 29.5447 29 29.0082 29H10.9918C10.4441 29 10 28.5551 10 28.0066V27H28V15.3L20 22.5L10 13.5V12C10 11.4477 10.4477 11 11 11H29ZM16 23V25H8V23H16ZM13 18V20H8V18H13ZM27.5659 13H12.4341L20 19.8093L27.5659 13Z"
+          fill="white"
+        />
+      </symbol>
+      <!-- MARK: addresstelephone -->
+      <symbol
+        id="addresstelephone"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="4" />
+        <path
+          d="M17.3656 18.6821C18.302 20.3288 19.6712 21.698 21.3179 22.6344L22.2024 21.3961C22.4965 20.9845 23.0516 20.8573 23.4956 21.0998C24.9024 21.8683 26.4571 22.3353 28.0789 22.4637C28.599 22.5049 29 22.9389 29 23.4606V27.9234C29 28.4361 28.6122 28.8657 28.1022 28.9181C27.5723 28.9726 27.0377 29 26.5 29C17.9396 29 11 22.0604 11 13.5C11 12.9623 11.0274 12.4277 11.0819 11.8978C11.1343 11.3877 11.5639 11 12.0767 11H16.5394C17.0611 11 17.4951 11.401 17.5363 11.9211C17.6647 13.5429 18.1317 15.0976 18.9002 16.5044C19.1427 16.9484 19.0155 17.5035 18.6039 17.7976L17.3656 18.6821ZM14.8443 18.0252L16.7442 16.6681C16.2055 15.5051 15.8363 14.2718 15.6473 13H13.0091C13.003 13.1663 13 13.333 13 13.5C13 20.9558 19.0442 27 26.5 27C26.667 27 26.8337 26.997 27 26.9909V24.3527C25.7282 24.1637 24.4949 23.7945 23.3319 23.2558L21.9748 25.1558C21.4258 24.9425 20.8956 24.6915 20.3874 24.4061L20.3293 24.373C18.3697 23.2587 16.7413 21.6303 15.627 19.6707L15.5939 19.6126C15.3085 19.1044 15.0575 18.5742 14.8443 18.0252Z"
+          fill="white"
+        />
+      </symbol>
+      <!-- MARK: facebook -->
+      <symbol id="facebook" width="18" height="21" viewBox="0 0 18 21">
+        <path
+          d="M13.4866 0.75H10.43C8.61604 0.75 6.59845 1.52784 6.59845 4.20863C6.60731 5.14273 6.59845 6.03731 6.59845 7.04411H4.5V10.4487H6.66339V20.25H10.6387V10.384H13.2626L13.5 7.03456H10.5702C10.5702 7.03456 10.5768 5.54457 10.5702 5.11187C10.5702 4.05248 11.6514 4.11314 11.7164 4.11314C12.2309 4.11314 13.2313 4.11467 13.4881 4.11314V0.75H13.4866Z"
+        />
+      </symbol>
+      <symbol id="instagram" width="18" height="19" viewBox="0 0 18 19">
+        <g clip-path="url(#clip0_222_653)">
+          <path
+            d="M6.00048 9.5C6.00048 7.84321 7.34322 6.49976 9 6.49976C10.6568 6.49976 12.0002 7.84321 12.0002 9.5C12.0002 11.1568 10.6568 12.5002 9 12.5002C7.34322 12.5002 6.00048 11.1568 6.00048 9.5ZM4.37859 9.5C4.37859 12.0524 6.44758 14.1214 9 14.1214C11.5524 14.1214 13.6214 12.0524 13.6214 9.5C13.6214 6.94758 11.5524 4.87859 9 4.87859C6.44758 4.87859 4.37859 6.94758 4.37859 9.5ZM12.7243 4.6954C12.7243 5.29152 13.2078 5.77569 13.8046 5.77569C14.4007 5.77569 14.8849 5.29152 14.8849 4.6954C14.8849 4.09927 14.4015 3.61583 13.8046 3.61583C13.2078 3.61583 12.7243 4.09927 12.7243 4.6954ZM5.36365 16.8258C4.48619 16.7858 4.00929 16.6397 3.69233 16.5161C3.27213 16.3525 2.97262 16.1577 2.65711 15.8429C2.34233 15.5281 2.14677 15.2286 1.98393 14.8084C1.86034 14.4914 1.71422 14.0145 1.67423 13.1371C1.63061 12.1884 1.62189 11.9034 1.62189 9.5C1.62189 7.09661 1.63134 6.81236 1.67423 5.86292C1.71422 4.98546 1.86107 4.50929 1.98393 4.1916C2.1475 3.77141 2.34233 3.47189 2.65711 3.15638C2.97189 2.8416 3.27141 2.64604 3.69233 2.4832C4.00929 2.35961 4.48619 2.21349 5.36365 2.17351C6.31236 2.12989 6.59733 2.12116 9 2.12116C11.4034 2.12116 11.6876 2.13061 12.6371 2.17351C13.5145 2.21349 13.9907 2.36034 14.3084 2.4832C14.7286 2.64604 15.0281 2.8416 15.3436 3.15638C15.6584 3.47116 15.8532 3.77141 16.0168 4.1916C16.1404 4.50856 16.2865 4.98546 16.3265 5.86292C16.3701 6.81236 16.3788 7.09661 16.3788 9.5C16.3788 11.9027 16.3701 12.1876 16.3265 13.1371C16.2865 14.0145 16.1397 14.4914 16.0168 14.8084C15.8532 15.2286 15.6584 15.5281 15.3436 15.8429C15.0288 16.1577 14.7286 16.3525 14.3084 16.5161C13.9914 16.6397 13.5145 16.7858 12.6371 16.8258C11.6884 16.8694 11.4034 16.8781 9 16.8781C6.59733 16.8781 6.31236 16.8694 5.36365 16.8258ZM5.2895 0.554523C4.33134 0.598142 3.67706 0.750081 3.10493 0.972536C2.51317 1.20226 2.01155 1.5105 1.51066 2.01066C1.0105 2.51082 0.702262 3.01244 0.472536 3.60493C0.250081 4.17706 0.0981422 4.83134 0.0545234 5.7895C0.0101777 6.74911 0 7.0559 0 9.5C0 11.9441 0.0101777 12.2509 0.0545234 13.2105C0.0981422 14.1687 0.250081 14.8229 0.472536 15.3951C0.702262 15.9868 1.00977 16.4892 1.51066 16.9893C2.01082 17.4895 2.51244 17.797 3.10493 18.0275C3.67779 18.2499 4.33134 18.4019 5.2895 18.4455C6.24984 18.4891 6.5559 18.5 9 18.5C11.4448 18.5 11.7509 18.4898 12.7105 18.4455C13.6687 18.4019 14.3229 18.2499 14.8951 18.0275C15.4868 17.797 15.9885 17.4895 16.4893 16.9893C16.9895 16.4892 17.297 15.9868 17.5275 15.3951C17.7499 14.8229 17.9026 14.1687 17.9455 13.2105C17.9891 12.2502 17.9993 11.9441 17.9993 9.5C17.9993 7.0559 17.9891 6.74911 17.9455 5.7895C17.9019 4.83134 17.7499 4.17706 17.5275 3.60493C17.297 3.01317 16.9895 2.51155 16.4893 2.01066C15.9892 1.5105 15.4868 1.20226 14.8958 0.972536C14.3229 0.750081 13.6687 0.597415 12.7112 0.554523C11.7516 0.510905 11.4448 0.5 9.00073 0.5C6.5559 0.5 6.24984 0.510178 5.2895 0.554523Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_222_653">
+            <rect
+              width="18"
+              height="18"
+              fill="white"
+              transform="translate(0 0.5)"
+            />
+          </clipPath>
+        </defs>
+      </symbol>
+      <!-- MARK: linkedin -->
+      <symbol id="linkedin" width="18" height="19" viewBox="0 0 18 19">
+        <g clip-path="url(#clip0_222_466)">
+          <path
+            d="M0 2.59066C0 1.98459 0.202708 1.48459 0.608108 1.09066C1.01351 0.696719 1.54055 0.499756 2.18919 0.499756C2.82626 0.499756 3.34169 0.693683 3.73552 1.08157C4.14092 1.48157 4.34363 2.00277 4.34363 2.64521C4.34363 3.22702 4.14672 3.71186 3.7529 4.09975C3.3475 4.49975 2.81467 4.69975 2.15444 4.69975H2.13707C1.49999 4.69975 0.984562 4.49975 0.590734 4.09975C0.196905 3.69975 0 3.19671 0 2.59066ZM0.225869 18.4997V6.35429H4.08301V18.4997H0.225869ZM6.22008 18.4997H10.0772V11.7179C10.0772 11.2937 10.1236 10.9664 10.2162 10.7361C10.3784 10.324 10.6245 9.97549 10.9546 9.69065C11.2847 9.4058 11.6988 9.26338 12.1969 9.26338C13.4942 9.26338 14.1429 10.1785 14.1429 12.0088V18.4997H18V11.5361C18 9.74216 17.5946 8.38156 16.7838 7.45429C15.973 6.52702 14.9016 6.06338 13.5695 6.06338C12.0753 6.06338 10.9112 6.73611 10.0772 8.08156V8.11793H10.0598L10.0772 8.08156V6.35429H6.22008C6.24324 6.74216 6.25483 7.94822 6.25483 9.97247C6.25483 11.9967 6.24324 14.8391 6.22008 18.4997Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_222_466">
+            <rect
+              width="18"
+              height="18"
+              fill="white"
+              transform="translate(0 0.5)"
+            />
+          </clipPath>
+        </defs>
+      </symbol>
+      <!-- MARK: submitarrow -->
+      <symbol id="submitarrow" width="24" height="24" viewBox="0 0 24 24">
+        <path
+          d="M20.34 9.31988L6.34 2.31988C5.78749 2.04489 5.16362 1.94699 4.55344 2.03954C3.94326 2.13208 3.37646 2.41055 2.93033 2.837C2.48421 3.26345 2.18046 3.81711 2.0605 4.42249C1.94054 5.02788 2.0102 5.65554 2.26 6.21988L4.66 11.5899C4.71446 11.7197 4.74251 11.8591 4.74251 11.9999C4.74251 12.1407 4.71446 12.2801 4.66 12.4099L2.26 17.7799C2.0567 18.2366 1.97076 18.7369 2.00998 19.2353C2.0492 19.7336 2.21235 20.2143 2.48459 20.6336C2.75682 21.0529 3.12953 21.3975 3.56883 21.6361C4.00812 21.8747 4.50009 21.9998 5 21.9999C5.46823 21.9952 5.92949 21.8859 6.35 21.6799L20.35 14.6799C20.8466 14.4301 21.264 14.0472 21.5557 13.574C21.8474 13.1007 22.0018 12.5558 22.0018 11.9999C22.0018 11.444 21.8474 10.899 21.5557 10.4258C21.264 9.95258 20.8466 9.5697 20.35 9.31988H20.34ZM19.45 12.8899L5.45 19.8899C5.26617 19.9782 5.05973 20.0081 4.85839 19.9757C4.65705 19.9434 4.47041 19.8502 4.32352 19.7087C4.17662 19.5673 4.07648 19.3843 4.03653 19.1843C3.99658 18.9843 4.01873 18.7769 4.1 18.5899L6.49 13.2199C6.52094 13.1482 6.54766 13.0747 6.57 12.9999H13.46C13.7252 12.9999 13.9796 12.8945 14.1671 12.707C14.3546 12.5195 14.46 12.2651 14.46 11.9999C14.46 11.7347 14.3546 11.4803 14.1671 11.2928C13.9796 11.1052 13.7252 10.9999 13.46 10.9999H6.57C6.54766 10.9251 6.52094 10.8516 6.49 10.7799L4.1 5.40988C4.01873 5.22285 3.99658 5.01543 4.03653 4.81545C4.07648 4.61547 4.17662 4.43249 4.32352 4.29103C4.47041 4.14958 4.65705 4.05641 4.85839 4.02404C5.05973 3.99166 5.26617 4.02161 5.45 4.10988L19.45 11.1099C19.6138 11.1938 19.7513 11.3213 19.8473 11.4783C19.9433 11.6354 19.994 11.8158 19.994 11.9999C19.994 12.1839 19.9433 12.3644 19.8473 12.5214C19.7513 12.6785 19.6138 12.806 19.45 12.8899Z"
+        />
+      </symbol>
+      <!-- MARK: facebookfilled -->
+      <symbol id="facebookfilled" width="24" height="24" viewBox="0 0 24 24">
+        <path
+          d="M12.8192 24H1.32462C0.592836 24 0 23.4068 0 22.6753V1.32461C0 0.592925 0.592929 0 1.32462 0H22.6755C23.407 0 24 0.592925 24 1.32461V22.6753C24 23.4069 23.4069 24 22.6755 24H16.5597V14.7059H19.6793L20.1464 11.0838H16.5597V8.77132C16.5597 7.72264 16.8509 7.00801 18.3546 7.00801L20.2727 7.00717V3.76755C19.9409 3.7234 18.8024 3.62478 17.4778 3.62478C14.7124 3.62478 12.8192 5.31276 12.8192 8.4126V11.0838H9.69156V14.7059H12.8192V24Z"
+        />
+      </symbol>
+      <!-- MARK: twitter -->
+      <symbol id="twitter" width="24" height="20" viewBox="0 0 24 20">
+        <path
+          d="M24 2.36764C23.1182 2.76923 22.1687 3.04081 21.1727 3.16215C22.1898 2.5381 22.9702 1.54857 23.3379 0.369808C22.3856 0.947635 21.3333 1.368 20.2092 1.59335C19.3133 0.612495 18.0328 0 16.6156 0C13.8982 0 11.6936 2.26074 11.6936 5.04875C11.6936 5.44457 11.7359 5.82882 11.8204 6.19863C7.72812 5.98772 4.10072 3.97978 1.67072 0.921633C1.2467 1.66992 1.0044 2.5381 1.0044 3.46262C1.0044 5.21343 1.87357 6.75912 3.19493 7.66486C2.38915 7.6403 1.62846 7.41062 0.96355 7.03503V7.09715C0.96355 9.54424 2.66103 11.5854 4.91495 12.0477C4.5022 12.1661 4.06691 12.2254 3.61754 12.2254C3.30058 12.2254 2.99067 12.195 2.69061 12.1358C3.31749 14.1408 5.13471 15.6013 7.29002 15.6403C5.60521 16.9953 3.48089 17.8028 1.17485 17.8028C0.777601 17.8028 0.384575 17.7797 0 17.7335C2.17926 19.1636 4.76845 20 7.54781 20C16.6057 20 21.5573 12.3077 21.5573 5.63525C21.5573 5.41567 21.5531 5.1961 21.5446 4.98086C22.5068 4.26869 23.3421 3.38028 24 2.36764Z"
+        />
+      </symbol>
+      <!-- MARK: behance -->
+      <symbol
+        id="behance"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.26306 8.02956C7.26306 8.02956 8.96616 7.90476 8.96616 5.93349C8.96616 3.96208 7.57281 3 5.80784 3H0V14.0165H5.80784C5.80784 14.0165 9.35331 14.127 9.35331 10.7649C9.35331 10.765 9.50788 8.02956 7.26306 8.02956ZM5.38979 4.95806H5.80784C5.80784 4.95806 6.59729 4.95806 6.59729 6.10428C6.59729 7.25036 6.13301 7.41652 5.60639 7.41652H2.55901V4.95806H5.38979ZM5.64372 12.0585H2.55901V9.11449H5.80784C5.80784 9.11449 6.98448 9.09926 6.98448 10.6274C6.98448 11.916 6.10564 12.0488 5.64372 12.0585ZM14.0818 5.80292C9.78963 5.80292 9.79344 10.0358 9.79344 10.0358C9.79344 10.0358 9.49894 14.2469 14.0818 14.2469C14.0818 14.2469 17.9008 14.4623 17.9008 11.3175H15.9368C15.9368 11.3175 16.0023 12.5018 14.1473 12.5018C14.1473 12.5018 12.1829 12.6317 12.1829 10.5851H17.9663C17.9663 10.5851 18.5991 5.80292 14.0818 5.80292ZM12.1613 9.11449C12.1613 9.11449 12.4012 7.41649 14.1254 7.41649C15.8494 7.41649 15.8278 9.11449 15.8278 9.11449H12.1613ZM16.2853 5.00561H11.6805V3.64901H16.2853V5.00561Z"
+        />
+      </symbol>
+      <!-- MARK: hamburger -->
+      <symbol id="hamburger" width="14" height="11" viewBox="0 0 14 11">
+        <line y1="1.25" x2="14" y2="1.25" stroke-width="1.5" />
+        <line y1="5.75" x2="14" y2="5.75" stroke-width="1.5" />
+        <line y1="10.25" x2="14" y2="10.25" stroke-width="1.5" />
+      </symbol>
+      <!-- MARK: arrowleft -->
+      <symbol id="arrowleft" width="28" height="18" viewBox="0 0 28 18">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M28 9C28 8.44771 27.5523 8 27 8L3.41422 8L9.70711 1.70711C10.0976 1.31658 10.0976 0.683416 9.70711 0.292892C9.31658 -0.0976334 8.68342 -0.0976334 8.29289 0.292892L0.292892 8.29289C-0.0976315 8.68342 -0.0976315 9.31658 0.292892 9.70711L8.29289 17.7071C8.68342 18.0976 9.31658 18.0976 9.70711 17.7071C10.0976 17.3166 10.0976 16.6834 9.70711 16.2929L3.41422 10L27 10C27.5523 10 28 9.55228 28 9Z"
+        />
+      </symbol>
+    </svg>
+  </body>
+</html>
