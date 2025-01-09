@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="alternate" hreflang="pl" href="https://indesignplugins.dev/pl/founder.html" />
-    <script type="module" src="index.js"></script>
-    <title>Adobe InDesign plugins and scritps development</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://indesignplugins.dev/founder.html"
+    />
+    <script type="module" src="../index.js"></script>
+    <title>Skrypty i pluginy dla programu Adobe InDesign</title>
   </head>
   <body
     class="text-base-clamp-sm mx-auto max-w-screen-xxl bg-background font-opensans text-text"
@@ -18,13 +22,13 @@
         class="mx-auto flex h-[66px] w-full max-w-[1400px] items-center border-b-2 border-primary md:h-12 md:rounded-lg md:border-none md:shadow-lg lg:h-16"
       >
         <div class="mx-4 flex w-full items-center justify-between">
-          <!--MARK: left -->
+          <!-- left -->
           <a href="index.html">
             <svg class="fill-primary" width="30mm" height="9.8704mm">
               <use href="#logo"></use>
             </svg>
           </a>
-          <!--MARK: center -->
+          <!-- center -->
           <div
             id="menu-items"
             aria-expanded="false"
@@ -47,7 +51,7 @@
                 </svg>
               </button>
               <p class="mt-7 text-xl font-bold text-primary">
-                Welcome to DeepForge
+                Witamy w DeepForge
               </p>
             </div>
             <ul
@@ -57,28 +61,26 @@
                 <a
                   href="index.html"
                   class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
-                  >Home</a
+                  >O Nas</a
                 >
                 <!-- dropdown -->
                 <ul
                   class="absolute left-1/2 top-8 z-10 hidden w-28 -translate-x-1/2 flex-col items-center justify-center rounded-lg bg-background p-1 shadow-lg group-hover:flex"
                 >
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="index.html" class="text-sm">Home</a>
+                    <a href="index.html" class="text-sm">Główna</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="index.html#omnie" class="text-sm">Who Am I?</a>
+                    <a href="index.html#omnie" class="text-sm">Kim jestem</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="index.html#uslugi" class="text-sm">Services</a>
+                    <a href="index.html#uslugi" class="text-sm">Usługi</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="index.html#korzysci" class="text-sm">Benefits</a>
+                    <a href="index.html#korzysci" class="text-sm">Korzyści</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="index.html#portfolio" class="text-sm"
-                      >Example scripts and plugins</a
-                    >
+                    <a href="index.html#portfolio" class="text-sm">Skrypty</a>
                   </li>
                 </ul>
               </li>
@@ -87,7 +89,7 @@
                 <a
                   href="founder.html"
                   class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
-                  >Founder</a
+                  >Założyciel</a
                 >
               </li>
 
@@ -103,21 +105,25 @@
                 <a
                   href="contact.html"
                   class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
-                  >Contact</a
+                  >Kontakt</a
                 >
               </li>
             </ul>
           </div>
-          <!--MARK: right -->
+          <!-- right -->
           <div class="flex items-center gap-4">
             <div class="group relative flex items-center gap-2">
               <a
-                href="founder.html"
+                href="/pl/founder.html"
                 class="flex items-center justify-center gap-2"
               >
-                <svg width="24" viewBox="0 0 25 20">
-                  <use href="#gbflag"></use></svg
-                ><span>Eng</span>
+                <svg
+                  width="24"
+                  viewBox="0 0 8 5"
+                  class="ring-1 ring-primary/20"
+                >
+                  <use href="#polflag"></use></svg
+                ><span>Pol</span>
               </a>
               <svg width="12" height="8" viewBox="0 0 12 8" class="fill-text">
                 <use href="#arrowdown" />
@@ -131,7 +137,7 @@
                   class="w-full rounded p-[6px] text-center hover:bg-cgrey"
                 >
                   <a
-                    href="founder.html"
+                    href="/founder.html"
                     class="flex items-center justify-center gap-2"
                   >
                     <svg width="24" viewBox="0 0 25 20">
@@ -144,7 +150,7 @@
                   class="w-full rounded p-[6px] text-center hover:bg-cgrey"
                 >
                   <a
-                    href="pl/founder.html"
+                    href="/pl/founder.html"
                     class="flex items-center justify-center gap-2"
                   >
                     <svg
@@ -180,130 +186,145 @@
     </div>
 
     <article class="mx-auto max-w-[1400px]">
-      <h1 class="h1 mt-10">About me</h1>
-      <h2 class="h2 mt-10">Who am I</h2>
+      <h1 class="h1 mt-10">O mnie</h1>
+      <h2 class="h2 mt-10">Kim jestem</h2>
       <div
         class="mx-auto grid max-w-[1400px] items-center gap-10 md:grid-cols-[1fr_33%]"
       >
         <div>
           <p class="max-w-prose">
-            With over 20 years of experience as a graphic design and DTP specialist, and an additional
+            Z ponad 20-letnim doświadczeniem jako specjalista ds. projektowania
+            graficznego i&nbsp;DTP oraz dodatkowymi
             <script>
               document.write(new Date().getFullYear() - 2021);
             </script>
-            &nbsp;years in web development, I bring a unique blend of creativity and technical expertise to the table. My journey in the design world has equipped me with a deep understanding of the industry's demands, while my technical skills enable me to create custom scripts and plugins that enhance and streamline workflows in Adobe InDesign.
+            &nbsp;latami jako programista stron WWW, wnoszę unikalne połączenie
+            kreatywności i&nbsp;wiedzy technicznej. Moja podróż przez świat
+            projektowania przyniosła mi głębokie zrozumienie wymagań branży,
+            a&nbsp;moje umiejętności techniczne pozwalają mi tworzyć
+            niestandardowe skrypty i&nbsp;wtyczki, które usprawniają
+            i&nbsp;optymalizują procesy pracy w&nbsp;Adobe InDesign. Znajomość
+            najnowszych technik programowania WWW oraz doskonała znajomość Adobe
+            InDesign doskonale sprawdzają się&nbsp;przy tworzeniu nowoczesnych
+            rozszerzeń dla tego programu.
           </p>
         </div>
         <div
           class="h-fit w-fit overflow-hidden rounded-md shadow-lg ring-1 ring-black/5"
         >
           <img
-            src="img/rafal_wlasciciel_deepforge.webp"
+            src="../img/rafal_wlasciciel_deepforge.webp"
             alt="Rafał Szewczak - właściciel DeepForge"
           />
         </div>
       </div>
       <div class="mt-10 grid gap-4 md:grid-cols-2">
         <div class="rounded-lg bg-cgrey p-4 shadow-lg ring-1 ring-primary/20">
-          <h2 class="h2 mt-10">My mission</h2>
+          <h2 class="h2 mt-10">Moja misja</h2>
           <p>
-            My mission is to help designers, agencies, and businesses unlock the full potential of Adobe InDesign by providing tailored scripting and plugin solutions. By automating repetitive tasks and expanding the software's capabilities, I aim to make your design process more efficient, creative, and enjoyable.
+            Moją misją jest pomoc projektantom, agencjom i firmom w odkryciu
+            pełnego potencjału Adobe InDesign poprzez dostarczanie
+            spersonalizowanych rozwiązań skryptowych i wtyczek. Automatyzując
+            powtarzające się zadania i rozszerzając możliwości oprogramowania,
+            dążę do tego, aby proces projektowania był bardziej efektywny,
+            kreatywny i przyjemny.
           </p>
         </div>
         <div class="rounded-lg bg-cgrey p-4 shadow-lg ring-1 ring-primary/20">
-          <h2 class="h2 mt-10">What I do</h2>
+          <h2 class="h2 mt-10">Czym się zajmuję</h2>
           <p>
-            I specialize in developing custom scripts and plugins for Adobe InDesign, designed to meet your specific needs. Whether you're looking to automate complex workflows, integrate external data, or add new functionalities to InDesign, I have the skills and experience to deliver high-quality, reliable solutions.
+            Specjalizuję się w tworzeniu niestandardowych skryptów i wtyczek dla
+            Adobe InDesign, zaprojektowanych zgodnie z Twoimi specyficznymi
+            potrzebami. Niezależnie od tego, czy chcesz zautomatyzować
+            skomplikowane procesy, zintegrować zewnętrzne dane, czy dodać nowe
+            funkcje do InDesign, posiadam umiejętności i doświadczenie, aby
+            dostarczyć wysokiej jakości, niezawodne rozwiązania.
           </p>
         </div>
       </div>
-      <h2 class="h2 mb-10 mt-20">Why Choose Me?</h2>
+      <h2 class="h2 mb-10 mt-20">Dlaczego warto wybrać mnie?</h2>
       <div class="flex flex-wrap items-center justify-center gap-4">
         <div
           class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
         >
-          <h3 class="h3">Extensive Experience:</h3>
+          <h3 class="h3">Bogate doświadczenie</h3>
           <p>
-            With two decades in the design industry and years of web development expertise, I understand both the creative and technical aspects of your needs.
+            Z dwudziestoletnim doświadczeniem w branży projektowania i latami
+            ekspertyzy w rozwoju webowym, rozumiem zarówno kreatywne, jak i
+            techniczne aspekty Twoich potrzeb.
           </p>
         </div>
         <div
           class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
         >
-          <h3 class="h3">Custom Solutions:</h3>
+          <h3 class="h3">Spersonalizowane rozwiązania</h3>
           <p>
-            Every script and plugin I develop is tailored to your specific requirements, ensuring seamless integration and maximum benefit.
+            Każdy skrypt i wtyczka, którą tworzę, jest dostosowana do Twoich
+            specyficznych wymagań, zapewniając płynną integrację i maksymalne
+            korzyści.
           </p>
         </div>
         <div
           class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
         >
-          <h3 class="h3">Proven Track Record:</h3>
+          <h3 class="h3">Udokumentowane osiągnięcia</h3>
           <p>
-            I have a history of helping clients save time and improve their design processes, delivering tangible results.
+            Mam historię pomagania klientom w oszczędzaniu czasu i poprawie
+            procesów projektowych, dostarczając namacalne rezultaty.
           </p>
         </div>
         <div
           class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
         >
-          <h3 class="h3">Continuous Support:</h3>
+          <h3 class="h3">Ciągłe wsparcie</h3>
           <p>
-            I offer ongoing support and updates to ensure your tools remain effective and up-to-date with the latest industry trends and software updates.
+            Oferuję ciągłe wsparcie i aktualizacje, aby Twoje narzędzia
+            pozostały skuteczne i na bieżąco z najnowszymi trendami branżowymi i
+            aktualizacjami oprogramowania.
           </p>
         </div>
-        <div
-          class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
-        >
-          <h3 class="h3">Passion for Innovation:</h3>
-          <p>
-            I am constantly exploring new ways to push the boundaries of what Adobe InDesign can do, bringing innovative solutions to my clients.
-          </p>
-        </div>
-      </div>
       </div>
 
       <div class="my-20 ml-auto max-w-prose text-right">
-        <h2 class="h2 mt-10">Lets work together</h2>
+        <h2 class="h2 mt-10">Pracujmy razem</h2>
         <p>
-          If you're looking to enhance your Adobe InDesign workflow and take your design projects to the next level, I'd love to collaborate with you. Contact me today to discuss your needs and how we can create the perfect solutions for your business.
+          Jeśli chcesz usprawnić swoje workflow w Adobe InDesign i wynieść swoje
+          projekty na wyższy poziom, chętnie z Tobą współpracuję. Skontaktuj się
+          ze mną już dziś, aby omówić Twoje potrzeby i jak możemy stworzyć
+          idealne rozwiązania dla Twojego biznesu.
         </p>
-        <a href="contact.html"><button class="cta mt-5">Shedule a free consultation</button></a>
+        <button class="cta mt-5">Umów się na bezpłatną konsultację</button>
       </div>
     </article>
 
     <!-- MARK: footer -->
-    <footer class="bg-primary px-4">
+    <footer class="mt-5 bg-primary px-4">
       <nav
         aria-label="footer navigation"
         class="mx-auto max-w-[1400px] py-7 md:grid md:grid-cols-[70%_1fr]"
       >
         <ul class="gap-7 space-y-7 text-lg text-white md:flex md:space-y-0">
-          <li><a href="index.html">Why DeepForge</a></li>
-          <li><a href="founder.html">About</a></li>
-          <li><a href="index.html#uslugi">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Czemu DeepForge</a></li>
+          <li><a href="founder.html">O mnie</a></li>
+          <li><a href="#uslugi">Usługi</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
         </ul>
         <div
           class="mt-7 flex w-full items-center justify-between justify-self-end md:mt-0 md:max-w-[152px]"
         >
-          <a href="under_construction.html">
+          <a href="#">
             <svg viewBox="0 0 24 24" class="w-12 fill-white md:w-6">
               <use href="#facebookfilled" />
             </svg>
           </a>
-          <a href="under_construction.html">
+          <a href="#">
             <svg viewBox="0 0 18 19" class="w-12 fill-white md:w-6">
               <use href="#linkedin" />
             </svg>
           </a>
-          <a href="under_construction.html">
+          <a href="#">
             <svg viewBox="0 0 18 18" class="w-12 fill-white md:w-6">
               <use href="#behance" />
-            </svg>
-          </a>
-          <a href="under_construction.html">
-            <svg viewBox="0 0 18 19" class="w-12 fill-white md:w-6">
-              <use href="#instagram" />
             </svg>
           </a>
         </div>
@@ -316,10 +337,8 @@
         <div
           class="col-span-1 col-start-2 mt-10 flex items-center justify-between gap-6 text-sm text-secondary md:justify-end"
         >
-          <span
-            ><a href="under_construction.html">Terms and conditions</a></span
-          >
-          <span><a href="under_construction.html">Privacy Policy</a></span>
+          <span><a href="#">Warunki świadczenia usług</a></span>
+          <span><a href="#">Polityka prywatności</a></span>
         </div>
       </nav>
     </footer>

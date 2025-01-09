@@ -1,17 +1,13 @@
 <!doctype html>
 <html lang="pl" class="scroll-smooth">
   <head>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="alternate"
-      hreflang="pl"
-      href="https://indesignplugins.dev/pl/"
-    />
-    <script type="module" src="index.js"></script>
-    <title>Adobe InDesign plugins and scritps development</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="alternate" hreflang="en" href="https://indesignplugins.dev/" />
+    <script type="module" src="../index.js"></script>
+    <title>Skrypty i pluginy dla programu Adobe InDesign</title>
   </head>
   <body
     class="text-base-clamp-sm mx-auto max-w-screen-xxl bg-background font-opensans text-text"
@@ -22,13 +18,13 @@
         class="mx-auto flex h-[66px] w-full max-w-[1400px] items-center border-b-2 border-primary md:h-12 md:rounded-lg md:border-none md:shadow-lg lg:h-16"
       >
         <div class="mx-4 flex w-full items-center justify-between">
-          <!--MARK: left -->
+          <!-- left -->
           <a href="index.html">
             <svg class="fill-primary" width="30mm" height="9.8704mm">
               <use href="#logo"></use>
             </svg>
           </a>
-          <!--MARK: center -->
+          <!-- center -->
           <div
             id="menu-items"
             aria-expanded="false"
@@ -51,7 +47,7 @@
                 </svg>
               </button>
               <p class="mt-7 text-xl font-bold text-primary">
-                Welcome to DeepForge
+                Witamy w DeepForge
               </p>
             </div>
             <ul
@@ -61,28 +57,26 @@
                 <a
                   href="index.html"
                   class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
-                  >Home</a
+                  >O Nas</a
                 >
                 <!-- dropdown -->
                 <ul
                   class="absolute left-1/2 top-8 z-10 hidden w-28 -translate-x-1/2 flex-col items-center justify-center rounded-lg bg-background p-1 shadow-lg group-hover:flex"
                 >
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="index.html" class="text-sm">Home</a>
+                    <a href="index.html" class="text-sm">Główna</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="#omnie" class="text-sm">Who Am I?</a>
+                    <a href="#omnie" class="text-sm">Kim jestem</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="#uslugi" class="text-sm">Services</a>
+                    <a href="#uslugi" class="text-sm">Usługi</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="#korzysci" class="text-sm">Benefits</a>
+                    <a href="#korzysci" class="text-sm">Korzyści</a>
                   </li>
                   <li class="w-full rounded p-[6px] text-center hover:bg-cgrey">
-                    <a href="#portfolio" class="text-sm"
-                      >Example scripts and plugins</a
-                    >
+                    <a href="#portfolio" class="text-sm">Skrypty</a>
                   </li>
                 </ul>
               </li>
@@ -91,7 +85,7 @@
                 <a
                   href="founder.html"
                   class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
-                  >Founder</a
+                  >Założyciel</a
                 >
               </li>
 
@@ -107,21 +101,25 @@
                 <a
                   href="contact.html"
                   class="decoration-primary underline-offset-8 hover:underline md:hover:font-normal md:hover:text-primary"
-                  >Contact</a
+                  >Kontakt</a
                 >
               </li>
             </ul>
           </div>
-          <!--MARK: right -->
+          <!-- right -->
           <div class="flex items-center gap-4">
             <div class="group relative flex items-center gap-2">
               <a
-                href="index.html"
+                href="/pl/index.html"
                 class="flex items-center justify-center gap-2"
               >
-                <svg width="24" viewBox="0 0 25 20">
-                  <use href="#gbflag"></use></svg
-                ><span>Eng</span>
+                <svg
+                  width="24"
+                  viewBox="0 0 8 5"
+                  class="ring-1 ring-primary/20"
+                >
+                  <use href="#polflag"></use></svg
+                ><span>Pol</span>
               </a>
               <svg width="12" height="8" viewBox="0 0 12 8" class="fill-text">
                 <use href="#arrowdown" />
@@ -135,7 +133,7 @@
                   class="w-full rounded p-[6px] text-center hover:bg-cgrey"
                 >
                   <a
-                    href="index.html"
+                    href="/index.html"
                     class="flex items-center justify-center gap-2"
                   >
                     <svg width="24" viewBox="0 0 25 20">
@@ -148,7 +146,7 @@
                   class="w-full rounded p-[6px] text-center hover:bg-cgrey"
                 >
                   <a
-                    href="pl/index.html"
+                    href="/pl/index.html"
                     class="flex items-center justify-center gap-2"
                   >
                     <svg
@@ -191,7 +189,7 @@
         >
           <div class="h-fit w-fit overflow-hidden rounded-md shadow-lg">
             <img
-              src="img/hero.png"
+              src="../img/hero.png"
               alt="Plugin or script code plugged into InDesign"
             />
           </div>
@@ -199,17 +197,19 @@
             class="mx-auto -mt-5 overflow-hidden rounded-md bg-cgrey/60 p-10 text-center shadow-lg ring-1 ring-black/5 backdrop-blur-sm max-md:w-10/12 md:-ml-10 md:p-14 md:text-right lg:-ml-20 lg:p-20 xl:-ml-40"
           >
             <h1 class="h1 relative">
-              Maximize Efficiency <br />
+              MAKSYMALIZUJ WYDAJNOŚĆ <br />
               <span class="text-base-clamp-lg normal-case">
-                with Custom Adobe InDesign Scripts and Plugins
+                dzięki niestandardowym skryptom i wtyczkom Adobe InDesign
               </span>
             </h1>
             <h2 class="mt-5">
-              Save time and elevate your designs with powerful automation tools
-              crafted to meet your specific needs.
+              Oszczędzaj czas i podnoś jakość swoich projektów dzięki potężnym
+              narzędziom automatyzującym, dostosowanym do Twoich potrzeb.
             </h2>
             <a href="contact.html"
-              ><button class="cta mt-5">Schedule a Free Consultation</button></a
+              ><button class="cta mt-5">
+                Umów się na bezpłatną konsultację
+              </button></a
             >
           </div>
         </div>
@@ -220,29 +220,32 @@
           class="mx-auto grid max-w-[1400px] items-center gap-10 md:grid-cols-[1fr_33%]"
         >
           <div>
-            <h2 class="h2">Who I Am</h2>
+            <h2 class="h2">KIM JESTEM</h2>
             <p class="">
-              With over 20 years of experience as a graphic design and DTP
-              specialist, and an additional
+              Z ponad 20-letnim doświadczeniem jako specjalista ds.
+              projektowania graficznego i&nbsp;DTP oraz dodatkowymi
               <script>
                 document.write(new Date().getFullYear() - 2021);
               </script>
-              &nbsp;years in web development, I bring a unique blend of
-              creativity and technical expertise to the table. My journey in the
-              design world has equipped me with a deep understanding of the
-              industry's demands, while my technical skills enable me to create
-              custom scripts and plugins that enhance and streamline workflows
-              in Adobe InDesign.
+              &nbsp;latami jako programista stron WWW, wnoszę unikalne
+              połączenie kreatywności i&nbsp;wiedzy technicznej. Moja podróż
+              przez świat projektowania przyniosła mi głębokie zrozumienie
+              wymagań branży, a&nbsp;moje umiejętności techniczne pozwalają mi
+              tworzyć niestandardowe skrypty i&nbsp;wtyczki, które usprawniają
+              i&nbsp;optymalizują procesy pracy w&nbsp;Adobe InDesign. Znajomość
+              najnowszych technik programowania WWW oraz doskonała znajomość
+              Adobe InDesign doskonale sprawdzają się&nbsp;przy tworzeniu
+              nowoczesnych rozszerzeń dla tego programu.
             </p>
             <a href="founder.html"
-              ><button class="primary mt-5">Find out more</button></a
+              ><button class="primary mt-5">Dowiedz się więcej</button></a
             >
           </div>
           <div
             class="h-fit w-fit overflow-hidden rounded-md shadow-lg ring-1 ring-black/5"
           >
             <img
-              src="img/rafal_wlasciciel_deepforge.webp"
+              src="../img/rafal_wlasciciel_deepforge.webp"
               alt="Rafał Szewczak - właściciel DeepForge"
             />
           </div>
@@ -251,65 +254,68 @@
       <!-- MARK: services -->
       <section id="uslugi" class="mt-10 px-4 py-10">
         <div class="mx-auto max-w-[1400px]">
-          <h2 class="h2">Services</h2>
-          <p>Service Overview</p>
+          <h2 class="h2">USŁUGI</h2>
+          <p>Przegląd Usług</p>
           <!-- container -->
           <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
             <!-- MARK: one -->
             <div>
               <h3 class="h3 mt-7">
-                Custom scripts and plugins for Adobe InDesign
+                Niestandardowe Skrypty i Wtyczki Adobe InDesign
               </h3>
               <p class="max-w-prose">
-                I specialize in creating custom scripts and plugins for Adobe
-                InDesign that automate repetitive tasks, extend software
-                functionality, and optimize design workflows. My solutions are
-                tailored to the individual needs of clients, resulting in
-                significant time savings, increased efficiency, and improved
-                project quality.
+                Specjalizuję się w tworzeniu niestandardowych skryptów i wtyczek
+                dla Adobe InDesign, które automatyzują powtarzające się zadania,
+                rozszerzają funkcjonalności oprogramowania i optymalizują
+                procesy projektowe. Moje rozwiązania są dostosowane do
+                indywidualnych potrzeb klientów, co pozwala na znaczne
+                oszczędności czasu, zwiększenie efektywności i poprawę jakości
+                projektów.
               </p>
               <a href="contact.html"
                 ><button class="cta mt-5">
-                  Schedule a free consultation
+                  Rezerwuj darmową konsultację
                 </button></a
               >
             </div>
             <!-- MARK: two -->
             <div>
-              <h3 class="h3">Service Offerings:</h3>
+              <h3 class="h3">Zakres Usług:</h3>
               <ul class="ml-4 list-disc space-y-2">
                 <li>
-                  <strong class="text-primary">Process Automation:</strong>
-                  Developing scripts that automate daily tasks, allowing you to
-                  focus on the creative aspects of your work.
+                  <strong class="text-primary">Automatyzacja Procesów:</strong>
+                  Tworzenie skryptów automatyzujących codzienne zadania, co
+                  pozwala na skoncentrowanie się na kreatywnych aspektach pracy.
                 </li>
                 <li>
-                  <strong class="text-primary">Functionality Extension:</strong>
-                  Creating plugins that add new features to Adobe InDesign,
-                  customized to the specific needs of your workflow.
+                  <strong class="text-primary"
+                    >Rozszerzenie Funkcjonalności:</strong
+                  >
+                  Opracowywanie wtyczek dodających nowe funkcje do Adobe
+                  InDesign, dostosowanych do specyficznych potrzeb Twojego
+                  przepływu pracy.
                 </li>
                 <li>
-                  <strong class="text-primary">Data Integration:</strong>
-                  Connecting Adobe InDesign with external data sources, making
-                  it easier to work with large amounts of information.
+                  <strong class="text-primary">Integracja Danych:</strong>
+                  Łączenie Adobe InDesign z zewnętrznymi źródłami danych, co
+                  ułatwia pracę z dużymi ilościami informacji.
                 </li>
                 <li>
-                  <strong class="text-primary">Data Extraction:</strong>
-                  Developing scripts for extracting data from multiple Adobe
-                  InDesign documents, facilitating easy online content placement
-                  and management of large publishing projects.
+                  <strong class="text-primary">Ekstrakcja Danych:</strong>
+                  Tworzenie skryptów umożliwiających ekstrakcję danych z wielu
+                  dokumentów Adobe InDesign, co pozwala na łatwe umieszczanie
+                  treści online i zarządzanie dużymi projektami wydawniczymi.
                 </li>
                 <li>
-                  <strong class="text-primary">Support and Updates:</strong>
-                  Providing continuous technical support and updates to ensure
-                  your tools are always up-to-date and functioning smoothly.
+                  <strong class="text-primary">Wsparcie i Aktualizacje:</strong>
+                  Ciągłe wsparcie techniczne oraz aktualizacje, zapewniające, że
+                  Twoje narzędzia są zawsze na bieżąco i działają bez zakłóceń.
+                  Zaufaj mojemu doświadczeniu i wiedzy, aby przekształcić swoje
+                  procesy projektowe i osiągnąć lepsze rezultaty w krótszym
+                  czasie. Skontaktuj się ze mną, aby dowiedzieć się więcej o
+                  tym, jak mogę pomóc Twojej firmie.
                 </li>
               </ul>
-              <p>
-                Trust my experience and expertise to transform your design
-                processes and achieve better results in less time. Contact me to
-                learn more about how I can help your business.
-              </p>
             </div>
           </div>
         </div>
@@ -317,58 +323,61 @@
       <!-- MARK: benefits -->
       <section id="korzysci" class="mt-10 bg-cgrey px-4 py-10">
         <div class="mx-auto max-w-[1400px]">
-          <h2 class="h2 my-10 text-center">Benefits</h2>
+          <h2 class="h2 my-10 text-center">KORZYŚCI</h2>
           <div class="flex flex-wrap items-center justify-center gap-4">
             <div
               class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
             >
-              <h3 class="h3">Workflow Automation</h3>
+              <h3 class="h3">Redukcja Kosztów</h3>
               <p>
-                I develop custom scripts that automate repetitive tasks,
-                allowing your team to focus on the creative and strategic
-                aspects of the project rather than routine operations.
+                Zredukuj pracę manualną i zwiększ wydajność, zyskując
+                długoterminowe oszczędności dzięki poprawie efektywności i
+                skróceniu czasu produkcji.
               </p>
             </div>
             <div
               class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
             >
-              <h3 class="h3 leading-tight">Enhanced Productivity</h3>
+              <h3 class="h3 leading-tight">Zwiększona Jakość</h3>
               <p>
-                By streamlining processes and reducing manual work, my solutions
-                significantly increase productivity, saving you time and
-                resources.
-              </p>
-            </div>
-
-            <div
-              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
-            >
-              <h3 class="h3">Tailored Solutions</h3>
-              <p>
-                Every script and plugin I create is tailored to your specific
-                needs, ensuring seamless integration into your current workflows
-                and tools.
-              </p>
-            </div>
-            <div
-              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
-            >
-              <h3 class="h3">Cost Efficiency</h3>
-              <p>
-                Automating time-consuming tasks reduces the need for manual
-                intervention, leading to lower labor costs and faster project
-                completion times.
+                Automatyzując powtarzające się zadania poprawisz jakość swoich
+                projektów poprzez wyeliminowanie ryzyka popełnienia błędów.
               </p>
             </div>
 
             <div
               class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
             >
-              <h3 class="h3">Error Reduction</h3>
+              <h3 class="h3">Spersonalizowane Rozwiązania</h3>
               <p>
-                By automating complex tasks, I help reduce the potential for
-                human error, improving the overall quality and consistency of
-                your projects.
+                Otrzymuj narzędzia dostosowane do Twoich konkretnych potrzeb,
+                zapewniając płynną integrację z istniejącymi procesami i
+                zwiększając produktywność.
+              </p>
+            </div>
+            <div
+              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
+            >
+              <h3 class="h3">Ekspertyza i Doświadczenie</h3>
+              <p>
+                Skorzystaj z mojego 20-letniego doświadczenia w projektowaniu
+                graficznym i
+                <script>
+                  document.write(new Date().getFullYear() - 2021 + "-letniej");
+                </script>
+                ekspertyzy w programowaniu www, zapewniając sobie niezawodne i
+                wysokiej jakości rozwiązania.
+              </p>
+            </div>
+
+            <div
+              class="grid min-h-[12lh] min-w-[270px] max-w-[450px] flex-1 content-center rounded-lg bg-background p-6 text-center shadow-lg ring-1 ring-black/5"
+            >
+              <h3 class="h3">Ciągłe Wsparcie</h3>
+              <p>
+                Uzyskaj dostęp do ciągłego wsparcia i aktualizacji, zapewniając,
+                że Twoje narzędzia pozostają skuteczne i na bieżąco z
+                najnowszymi funkcjami Adobe InDesign i trendami branżowymi.
               </p>
             </div>
           </div>
@@ -377,7 +386,7 @@
       <!-- MARK: portfolio -->
       <section id="portfolio" class="mt-10 px-4 py-10">
         <div class="mx-auto max-w-[1400px]">
-          <h2 class="h2 mb-10">Script and plugin examples</h2>
+          <h2 class="h2 mb-10">Przykłady skryptów</h2>
           <!-- MARK: item1 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -385,7 +394,7 @@
                 class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
                 data-accordionbutton="1"
               >
-                <h3 class="ml-4 font-bold text-primary">AI DeepL Translator</h3>
+                <h3 class="ml-4 font-bold text-primary">Tłumacz AI DeepL</h3>
                 <svg
                   width="12"
                   height="8"
@@ -402,33 +411,34 @@
             >
               <div class="overflow-hidden">
                 <strong>Problem:</strong>
-                Thomas needs to translate the content of multiple .indd
-                documents using DeepL AI. He wants to preserve the text
-                formatting applied in the documents. He also needs the ability
-                to use both the free and paid modes of DeepL.
-                <h4 class="h4">Input Data:</h4>
+                Thomas potrzebuje przetłumaczyć zawartość wielu dokumentów .indd
+                za pomocą sztucznej inteligencji DeepL. Zależy mu na tym, aby
+                zachować formatowanie tekstu zastosowane w dokumentach.
+                Potrzebuje mieć także możliwość korzystania zarówno z darmowego
+                jak i płatnego trybu pracy DeepL
+                <h4 class="h4">Dane wejściowe:</h4>
                 <ul class="ml-8 list-disc">
-                  <li>.indd documents</li>
+                  <li>dokumenty .indd</li>
                 </ul>
-                <h4 class="h4">Solution:</h4>
-                A script that, when run, translates the entire currently open
-                InDesign document according to the specified parameters. The
-                dialog box displays information about the currently available
-                character limit (paid or free) and the estimated number of
-                characters in the open document. The dialog box also allows the
-                user to select the source and target languages.
-                <h4 class="h4">Delivered:</h4>
+                <h4 class="h4">Rozwiązanie:</h4>
+                Skrypt, który po uruchomieniu tłumaczy cały aktualnie otwarty
+                dokument InDesigna wg zadanych parametrów. Okno dialogowe
+                wyświetla informacje na temat aktualnie dostępnego limitu znaków
+                (płatnego lub darmowego) oraz szacowaną liczbę znaków w otwartym
+                dokumencie. Okno dialogowe daje również możliwość wybrania
+                języka źródłowego i docelowego.
+                <h4 class="h4">Dostarczono:</h4>
                 <ul>
-                  <li>Script</li>
+                  <li>skrypt</li>
                   <li>
-                    A JSON configuration file containing default DeepL mode
-                    parameters and a placeholder for the user's DeepL API key.
+                    plik konfiguracyjny w formacie JSON zawierający domyślne
+                    parametry trybu pracy DeepL oraz miejsce, w którym należy
+                    umieścić własny klucz API DeepL
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-
           <!-- MARK: item2 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -437,7 +447,7 @@
                 data-accordionbutton="2"
               >
                 <h3 class="ml-4 font-bold text-primary">
-                  Branded E-book Generator
+                  Generator markowych e-booków
                 </h3>
                 <svg
                   width="12"
@@ -456,106 +466,97 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem:</h4>
                 <p>
-                  Irina prepared a set of 5 e-books in InDesign in different
-                  language versions placed on separate layers. She needed a
-                  quick way to personalize the entire set for a specific client.
-                  The personalization needed to include:
+                  Irina przygotowała w InDesignie zestaw 5 e-booków w różnych
+                  wersjach językowych umieszczonych na oddzielnych warstwach.
+                  Potrzebuje szybkiego sposobu, żeby cały zestaw spersonalizować
+                  pod konkretnego klienta. Personalizacja ma obejmować:
                 </p>
                 <ul class="ml-8 list-disc">
                   <li>
-                    Replacing the logo placed in various locations (logos come
-                    in 2 versions adjusted for light and dark backgrounds),
+                    podmianę logotypu umieszczonego w różnych miejscach
+                    (logotypy są w 2 wersjach dostosowanych do jasnego i
+                    ciemnego tła),
                   </li>
                   <li>
-                    Changing the language version of the document (by switching
-                    the visibility of the appropriate layers in the document),
+                    zmianę wersji językowej dokumentu (poprzez zmianę
+                    widoczności odpowiednich warstw w dokumencie)
                   </li>
-                  <li>Changing the main color theme,</li>
-                  <li>Updating the table of contents,</li>
+                  <li>zmianę głównego motywu kolorystycznego</li>
+                  <li>zaktualizowanie spisu treści</li>
                 </ul>
                 <p>
-                  The final e-books needed to be in PDF format with specified
-                  parameters and should have an active (clickable) table of
-                  contents.
+                  Gotowe e-booki mają być w formacie PDF o określonych
+                  parametrach oraz mają mieć aktywny (klikalny) spis treści.
                 </p>
-
-                <h4 class="h4">Input Data:</h4>
+                <h4 class="h4">Dane wejściowe:</h4>
                 <p>
-                  A folder with e-book templates (files .indd, .indb, and
-                  graphic files). For each personalized version, the following
-                  were required:
+                  Folder z wzorcami e-booków (pliki .indd, .indb oraz pliki
+                  graficzne) Dla każdej spersonalizowanej wersji potrzeba:
                 </p>
                 <ul class="ml-8 list-disc">
-                  <li>2 logos in both dark and light versions,</li>
-                  <li>Information about the language version,</li>
+                  <li>2 logotypów w wersji ciemnej i jasnej,</li>
+                  <li>informacji o wersji językowej</li>
                   <li>
-                    Information about the main color theme to be used for the
-                    books,
+                    informacji o kolorze jaki ma być głównym motywem książek
                   </li>
                 </ul>
 
-                <h4 class="h4">Solution:</h4>
+                <h4 class="h4">Rozwiązanie:</h4>
                 <p>
-                  A script that, when run, asks for the location of the input
-                  data folder and then generates the e-books.
+                  Skrypt, który po uruchomieniu poprosi o podanie lokalizacji
+                  folderu z danymi wejściowymi a następnie wygeneruje e-booki.
                 </p>
-                <p>The input data folder must contain:</p>
+                <p>Folder z danymi wejściowymi musi zawierać:</p>
                 <ul class="ml-8 list-disc">
                   <li>
-                    Subfolders with book templates, named in the format
-                    [number]_[name] e.g. 123_book 1
+                    podfoldery z wzorcami książek, których nazwy muszą być w
+                    formacie [numer]_[nazwa] np. 123_book 1
                   </li>
                   <li>
-                    An "Input" subfolder containing one or more folders with
-                    personalization information for the clients. Each of these
-                    folders:
+                    podfolder "Input" zawierający 1 lub więcej folder/ów z
+                    informacjami o personalizacji dla klienta/ów. Każdy z tych
+                    folderów:
                     <ul class="list-inside [list-style-type:circle]">
                       <li>
-                        Must be named in the format [name]_[language code]_[HEX
-                        RGB color code] e.g. Coca Cola_DE_fa7ca3
+                        musi mieć nazwę w formacie [nazwa]_[kod jezyka]_[kod HEX
+                        RGB koloru] np. Coca Cola_DE_fa7ca3
                       </li>
                       <li>
-                        Must contain 2 logos in .png format named "dark.png" and
-                        "light.png"
+                        musi zawierać 2 logotypy w formacie .png nazwane
+                        "dark.png" i "light.png"
                       </li>
                     </ul>
                   </li>
                 </ul>
-
                 <p>
-                  Before generating the e-books, the script analyzes all the
-                  input data and, in case of errors, creates a list in a txt
-                  file asking for corrections.
+                  Przed wygenerowaniem e-booków skrypt analizuje całość danych
+                  wejściowych i w przypadku błędów tworzy ich listę w pliku txt
+                  prosząc o ich skorygowanie.
                 </p>
-                <p>The script checks the data for:</p>
+                <p>Skrypt sprawdza dane pod kątem:</p>
                 <ul class="list-inside list-disc">
                   <li>
-                    Completeness of the templates (presence of .indd, indb
-                    files, and any missing links in these files),
+                    kompletności wzorców (obecność plików .indd, indb oraz
+                    brakujących linków w tych plikach)
                   </li>
-                  <li>
-                    Completeness and correctness of the personalization data,
-                  </li>
+                  <li>kompletności i poprawności danych o personalizacji</li>
                 </ul>
                 <p>
-                  If there are no errors, the script creates an "Output"
-                  subfolder in the specified folder containing the ready
-                  e-books.
+                  W przypadku braku błędów skrypt tworzy w podanym folderze
+                  podfolder "Output" zawierający gotowe e-booki.
                 </p>
-
-                <h4 class="h4">Delivered:</h4>
+                <h4 class="h4">Dostarczono:</h4>
                 <ul class="list-inside list-disc">
-                  <li>Script,</li>
+                  <li>skrypt</li>
                   <li>
-                    Installation, usage instructions, and details on how to
-                    prepare the data,
+                    instrukcja instalacji, obsługi, i sposobu przygotowania
+                    danych
                   </li>
-                  <li>A few folders with example data,</li>
+                  <li>kilka folderów z przykładowymi danymi</li>
                 </ul>
               </div>
             </div>
           </div>
-
           <!-- MARK: item3 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -564,7 +565,7 @@
                 data-accordionbutton="3"
               >
                 <h3 class="ml-4 font-bold text-primary">
-                  Add Selection to Master Page
+                  Dodaj zaznaczenie do strony wzorcowej
                 </h3>
                 <svg
                   width="12"
@@ -583,35 +584,33 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Rafał needs a quick way to update templates (master pages)
-                  used in the document. He wants to add elements directly from
-                  the page he is currently editing, as switching to the master
-                  page to do this interrupts his creative process. Additionally,
-                  he has to return to the last edited page afterward, which is
-                  somewhat cumbersome in long documents.
+                  Rafał potrzebuje szybkiego sposobu na zaktualizowanie
+                  szablonów (stron wzorcowych) użytych w dokumencie. Chce
+                  dodawać do nich elementy bezpośrednio ze strony, którą
+                  aktualnie edytuje, gdyż przełączanie się na stronę wzorcową w
+                  tym celu może zakłócić jego proces twórczy. Dodatkowo trzeba
+                  potem wrócić na ostatnio edytowaną stronę, co w długich
+                  dokumentach jest trochę uciążliwe.
                 </p>
-
-                <h4 class="h4">Input Data</h4>
+                <h4 class="h4">Dane wejściowe</h4>
                 <ul class="list-inside list-disc">
-                  <li>.indd document</li>
+                  <li>dokument .indd</li>
                 </ul>
 
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A small script that, when run, adds the selected element(s) to
-                  the template used on the currently edited page, resulting in
-                  the element being added to all pages where that template was
-                  applied.
+                  Niewielki skrypt, który po uruchomieniu dodaje zaznaczony
+                  element/ty do szablonu, który jest użyty na aktualnie
+                  edytowanej stronie, co w rezultacie powoduje dodanie elementu
+                  do wszystkich stron, na których dany szablon był zastosowany.
                 </p>
-
-                <h4 class="h4">Delivered</h4>
+                <h4 class="h4">Dostarczono</h4>
                 <ul class="list-inside list-disc">
-                  <li>Script</li>
+                  <li>skrypt</li>
                 </ul>
               </div>
             </div>
           </div>
-
           <!-- MARK: item4 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -619,7 +618,9 @@
                 class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
                 data-accordionbutton="4"
               >
-                <h3 class="ml-4 font-bold text-primary">Name Card Generator</h3>
+                <h3 class="ml-4 font-bold text-primary">
+                  Generator kart imiennych
+                </h3>
                 <svg
                   width="12"
                   height="8"
@@ -637,44 +638,41 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Johann needs to quickly create 1000+ name cards with a photo
-                  and a short text. He cannot use InDesign's built-in "Data
-                  Merge" function because the texts to be placed on the cards
-                  vary in length, and formatting must be adjusted so the text
-                  fits.
+                  Johann potrzebuje szybko stworzyć 1000+ kart imiennych ze
+                  zdjęciem i krótkim tekstem. Nie może wykorzystać wbudowanej
+                  funkcji InDesigna "Scalanie Danych" bo teksty, które mają być
+                  umieszczone na kartach mają różną długość i trzeba dopasować
+                  formatowanie tak, aby tekst się zmieścił
                 </p>
-                <h4 class="h4">Input Data</h4>
+                <h4 class="h4">Dane wejściowe</h4>
                 <ul class="list-inside list-disc">
+                  <li>Folder ze zdjęciami, które mają numer w nazwie</li>
                   <li>
-                    A folder with photos that are numbered in the file names
-                  </li>
-                  <li>
-                    An Excel file specially prepared by Johann containing data
-                    in the format: photo_number;description;name_surname
+                    specjalnie przygotowany przez Johanna plik excela
+                    zawierający dane w formacie: nr_zdjęcia;opis;imię_nazwisko
                   </li>
                 </ul>
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A script that prompts for the input data location via a simple
-                  dialog window and then generates the document. Johann can
-                  independently adjust the text formatting by modifying existing
-                  styles in the provided template. He can also change the
-                  appearance of individual card elements by editing the items in
-                  the supplied library.
+                  Skrypt, który prosi o podanie lokalizacji danych wejściowych
+                  wyświetlając proste okno dialogowe a następnie generuje
+                  dokument. Johann może samodzielnie dostosować formatowanie
+                  tekstu modyfikując istniejące style w dostarczonym szablonie.
+                  Może także zmienić wygląd poszczególny elementów karty
+                  modyfikując elementy w dostarczonej bibliotece.
                 </p>
-                <h4 class="h4">Delivered:</h4>
+                <h4 class="h4">Dostarczono:</h4>
                 <ul class="list-inside list-disc">
-                  <li>Script</li>
-                  <li>Card template with predefined styles</li>
+                  <li>skrypt,</li>
+                  <li>szablon karty ze zdefiniowanymi stylami,</li>
                   <li>
-                    A library containing elements used by the script to generate
-                    the card
+                    biblioteka zawierająca elementy, których skrypt używa do
+                    generowania karty.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-
           <!-- MARK: item5 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -683,7 +681,7 @@
                 data-accordionbutton="5"
               >
                 <h3 class="ml-4 font-bold text-primary">
-                  Color Swatch Generator
+                  Generator wzornika kolorów
                 </h3>
                 <svg
                   width="12"
@@ -702,39 +700,39 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Ron needs to create a color swatch book in InDesign. It’s
-                  meant to be a 300+ page booklet containing samples of over
-                  2000 colors. While manually creating it is possible, it’s
-                  extremely time-consuming and prone to errors. Ron has prepared
-                  color information in an XML file, generated in an external
-                  specialized application, along with an Excel file that
-                  specifies which colors should go on each page.
+                  Ron potrzebuje przygotować wzornik kolorów w programie
+                  InDesign. Ma to być ponad 300-stronnicowa książeczka
+                  zawierająca wzory ponad 2000 kolorów. Ręczne wykonanie jest
+                  możliwe ale bardzo pracochłonne i przede wszystkim bardzo
+                  podatne na pomyłki. Ron przygotował informacje o kolorach w
+                  formie pliku XML, który wygenerował w zewnętrznej
+                  specjalistycznej aplikacji oraz plik Excela z informacjami o
+                  tym jaki kolory umieścić na której stronie.
                 </p>
 
-                <h4 class="h4">Input Data</h4>
+                <h4 class="h4">Dane wejściowe</h4>
                 <ul class="list-inside list-disc">
-                  <li>Book template in .indd file</li>
-                  <li>XML with color information</li>
+                  <li>szablon książki w pliku .indd</li>
+                  <li>XML z informacjami o kolorach</li>
                   <li>
-                    CSV with information on which colors should go on each page
+                    CSV z informacjami o tym jakie kolory na której stronie
                   </li>
                 </ul>
 
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A script that, when run, generates the color swatch based on
-                  the template Ron provided.
+                  Skrypt, który po uruchomieniu generuje wzornik kolorów na
+                  podstawie określonego przez Rona szablonu.
                 </p>
 
-                <h4 class="h4">Delivered</h4>
+                <h4 class="h4">Dostarczono</h4>
                 <p>
-                  Completed color swatches in PDF format and .indd files as
-                  requested.
+                  Gotowe wzorniki w formacie PDF i pliki .indd zgodnie z
+                  zamówieniem.
                 </p>
               </div>
             </div>
           </div>
-
           <!-- MARK: item6 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -743,7 +741,7 @@
                 data-accordionbutton="6"
               >
                 <h3 class="ml-4 font-bold text-primary">
-                  Multifunctional Document Cleaning Plugin
+                  Wielofunkcyjny plugin do czyszczenia dokumentów
                 </h3>
                 <svg
                   width="12"
@@ -762,107 +760,118 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Benjamin processes about 1000 InDesign documents annually,
-                  which are informational leaflets or advertisements. His job is
-                  to prepare documents for translation into other languages on
-                  an external platform that processes files automatically.
+                  Benjamin przetwarza rocznie około 1000 dokumentów InDesigna
+                  rocznie. Są to ulotki informacyjne lub reklamy. Jego praca
+                  polega na przygotowaniu dokumentów do tłumaczenia na inne
+                  języki na zewnętrznej platwormie, która przetwarza pliki
+                  automatycznie.
                 </p>
                 <p>
-                  For the documents to be processed correctly, they must meet
-                  several requirements. The documents he deals with can be
-                  divided into two categories based on their processing method:
+                  Aby dokumenty zostały przetworzone poprawnie muszą spełniać
+                  szereg wymagań. Dokumenty, którymi się zajmuje można podzielić
+                  na 2 kategorie ze względu na sposób przetwarzania:
                 </p>
                 <ul class="list-inside list-disc">
-                  <li>master - source documents</li>
+                  <li>master - dokumenty źródłowe</li>
                   <li>
-                    local - already translated documents that still contain
-                    errors. Depending on the type of document, different tasks
-                    need to be performed.
+                    local - dokumenty już przetłumaczone ale nadal zawierające
+                    błędy W zależności od rodzaju dokumentu trzeba wykonać różne
+                    czynności.
                   </li>
                 </ul>
-                <p>Master documents require:</p>
+                <p>Dokumenty "master" wymagają:</p>
                 <ul class="list-inside list-disc">
                   <li>
-                    converting attached images to JPG or PNG format and reducing
-                    their resolution if necessary so they don’t take up too much
-                    space on the platform
+                    skonwertowania załączonych grafik do formatu jpg lub png
+                    oraz zmniejszenia ich rozdzielczości w razie potrzeby aby
+                    nie zajmowały zbyt dużo miejsca na platformie
                   </li>
                   <li>
-                    fixing broken links; additionally, this function renames all
-                    files sequentially to prevent broken links during further
-                    processing on the platform
+                    naprawienia brakujących linków; funkcja ta ma dodatkowo
+                    zmienić nazwy wszystkich plików na numery kolejne, aby
+                    zapobiec zerwaniu linku podczas dalszego przetwarzania na
+                    platformie
                   </li>
-                  <li>fixing cropped text that doesn’t fit within frames</li>
                   <li>
-                    adding all colors used in the document to the "Swatches"
-                    panel in InDesign, named according to a specified convention
+                    naprawienia uciętych tekstów (nie mieszczących się w
+                    ramkach)
                   </li>
-                  <li>removing all XML tags in the document and saving it</li>
+                  <li>
+                    dodania wszystkich kolorów użytych w dokumencie do panelu
+                    "Próbki" w InDesignie poprzez ich nazwanie w określony
+                    sposób
+                  </li>
+                  <li>
+                    usunięcia wszystkich obecnych w dokumencie tagów XML oraz
+                    zapisania dokumentu
+                  </li>
                 </ul>
-                <p>Local documents additionally require:</p>
+                <p>Dokumenty "local" dodatkowo wymagają:</p>
                 <ul class="list-inside list-disc">
                   <li>
-                    fixing missing diacritical marks and improving the
-                    visibility of black text placed on dark backgrounds
+                    naprawienia brakujących znaków diakrytycznych poprawienia
+                    widoczności tekstu w kolorze czarnym, który jest umieszczony
+                    na ciemnym tle
                   </li>
                 </ul>
                 <p>
-                  Benjamin is a former programmer, and with the help of ChatGPT,
-                  he created scripts that significantly ease his workflow.
-                  However, he’s not fully satisfied with them. He wants to merge
-                  them into one solution, improve their functionality, and
-                  extend them with additional features. Ergonomics and a
-                  professional appearance are very important to him, as he wants
-                  others to use this solution as well.
+                  Benjamin jest byłym programistą i z pomocą chat GPT
+                  przygotował skrypty znacznie ułatwiające mu pracę, ale nie
+                  jest do końca z nich zadowolony. Chciałby je scalić w jedno
+                  rozwiązanie i poprawić ich działanie oraz rozszerzyć o
+                  dodatkowe funkcje. Bardzo zależy mu na ergonomii i
+                  profesjonalnym wyglądzie dostarczonego rozwiązania, bo chce
+                  aby korzystali z niego także inni.
                 </p>
 
-                <h4 class="h4">Input Data</h4>
+                <h4 class="h4">Dane wejściowe</h4>
                 <ul class="list-inside list-disc">
-                  <li>.indd files</li>
+                  <li>pliki .indd</li>
                 </ul>
 
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A UXP plugin with its own panel integrated into InDesign’s
-                  user interface. It allows the user to select the type of
-                  document(s) being processed (master or local), the range of
-                  files to be processed (the active document or all open
-                  documents), and the scope of changes to be applied to the
-                  selected documents. After clicking the "Run checks" button,
-                  the plugin processes the documents.
+                  Plugin UXP z własnym panelem integrujący się w interfejs
+                  użytkownika programu InDesign. Pozwala on wybrać rodzaj
+                  dokumentu lub dokumentów, które będą przetwarzane (master lub
+                  local), zakres plików, które będą przetworzone (aktywny
+                  dokument lub wszystkie otwarte dokumenty) oraz zakres zmian,
+                  jakie mają zostać wykonane na wybranych dokumentach. Po
+                  kliknięciu przycisku "Run checks" plugin przetwarza dokumenty.
                 </p>
                 <p>
-                  Any errors or information indicating that a document still
-                  requires manual editing are saved to a text file to avoid
-                  interrupting the workflow with dialog boxes. Once processing
-                  is complete, the plugin displays a message about successful
-                  processing or any encountered errors, referring to the text
-                  log for details.
+                  Wszystkie ewentualne błędy lub informacje o tym, że dany
+                  dokument nadal wymaga manualnej edycji są zapisywane w pliku
+                  tekstowym aby nie przerywać pracy oknami dialogowymi. Po
+                  zakończeniu przetwarzania plugin wyświetla informację o
+                  bezbłędnym przebiegu lub wystąpionych błędach odsyłając po
+                  szczegóły do ww. pliku.
                 </p>
                 <p>
-                  In "local" mode, the plugin displays two additional options
-                  for possible modifications. One of them is the ability to scan
-                  the document for invisible black text.
+                  W trybie "local" plugin wyświetla 2 dodatkowe opcje możliwych
+                  modyfikacji. Jedną z nich jest możliwość przeskanowania
+                  dokumentu pod kątem niewidzialnych czarnych napisów.
                 </p>
                 <p>
-                  If found, this information is logged in the text file. The
-                  user can then fix such errors in semi-automatic mode. After
-                  clicking the "Find Invisible Black Texts" button, the plugin
-                  searches for these errors in the currently open document. With
-                  "Prev" and "Next" buttons, the user can locate the errors,
-                  zoom in, and highlight the text frame. The user can quickly
-                  assign one of four pre-defined colors to the text or use the
-                  "Select text" button to highlight the text and assign any
-                  color from the palette.
+                  W przypadku, gdy zostaną wykryte informacja o tym jest
+                  umieszczana w logu tekstowym. Użytkownik może następnie
+                  skorygować tego typu błędy w trybie półautomatycznym, który
+                  polega na tym, że po kliknięciu przycisku "Find Invisible
+                  Black Texts" plugin wyszukuje wszystkie tego typu błędy w
+                  aktualnie otwartym dokumencie i za pomocą przycisków "Prev"
+                  "Next" pozwala je lokalizować w dokumencie robiąc zbliżenie i
+                  zaznaczając daną ramkę tekstową. Użytkownik może szybko nadać
+                  tekstowi w ramce jeden z 4 zdefiniowanych wcześniej przez
+                  Benjamina kolorów lub za pomocą przycisku "Select text"
+                  zaznaczyć tekst w ramce, aby nadać mu dowolny kolor z palety.
                 </p>
                 <p>
-                  Additionally, the plugin adapts its appearance to the
-                  currently selected color theme in InDesign.
+                  Dodatkowo plugin dostosowuje swój wygląd do aktualnie
+                  wybranego w InDesignie motywu kolorystycznego.
                 </p>
               </div>
             </div>
           </div>
-
           <!-- MARK: item 7 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -871,7 +880,7 @@
                 data-accordionbutton="7"
               >
                 <h3 class="ml-4 font-bold text-primary">
-                  Local Events Listing Generator
+                  Generator wykazu lokalnych imprez
                 </h3>
                 <svg
                   width="12"
@@ -890,41 +899,41 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Cruisin' News needs a way to generate their online-published
-                  calendar of local events in the form of an InDesign document.
-                  Manually creating the document is very time-consuming,
-                  tedious, and prone to mistakes. They have data in a database
-                  they can use in any way, but before placing it in the
-                  template, it must first be processed as per client guidelines
-                  (grouping and removing unnecessary content) and then formatted
-                  in a strictly defined way that is easy to edit.
+                  Cruisin' News potrzebuje sposobu na uzyskanie ich kalendarza
+                  lokalnych wydarzeń publikowanego online w formie dokumentu
+                  InDesign. Ręczne tworzenie dokumentu jest bardzo czasochłonne,
+                  żmudne i podatne na pomyłki. Mają dane w bazie, z której mogą
+                  korzystać w dowolny sposób. Dane przed ułożeniem w szablon
+                  muszą być uprzednio przetworzone według zaleceń klienta
+                  (grupowanie i oczyszczenie z niepotrzebnych treści), a
+                  następnie sformatowane w ściśle określony sposób, który będzie
+                  łatwy do edytowania.
                 </p>
 
-                <h4 class="h4">Input Data</h4>
+                <h4 class="h4">Dane wejściowe</h4>
                 <ul class="list-inside list-disc">
-                  <li>An XML file generated from an external application</li>
+                  <li>plik XML wygenerowany w zewnętrznej aplikacji</li>
                 </ul>
 
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A script that, upon running, asks for the location of the XML
-                  file with the data and then generates the calendar in
-                  InDesign. The script uses a template with predefined text
-                  styles that can be easily modified.
+                  Skrypt, który po uruchomieniu prosi o lokalizację pliku XML z
+                  danymi a następnie generuje kalendarz w programie InDesign.
+                  Skrypt korzysta z szablonu ze zdefiniowanymi stylami tekstu,
+                  które można łatwo zmienić.
                 </p>
 
-                <h4 class="h4">Delivered:</h4>
+                <h4 class="h4">Dostarczono:</h4>
                 <ul class="list-inside list-disc">
-                  <li>script</li>
+                  <li>skrypt</li>
                   <li>
-                    an empty calendar template with all text styles defined in
-                    an .indd file
+                    pusty szablon kalendarza ze zdefiniowanymi wszystkimi
+                    stylami tekstu w formie pliku .indd
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-
           <!-- MARK: item 8 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -932,7 +941,9 @@
                 class="flex w-full items-center justify-between gap-4 bg-transparent px-4 py-2"
                 data-accordionbutton="8"
               >
-                <h3 class="ml-4 font-bold text-primary">PDF Merger Tool</h3>
+                <h3 class="ml-4 font-bold text-primary">
+                  Narzędzie do łączenia PDF-ów
+                </h3>
                 <svg
                   width="12"
                   height="8"
@@ -950,28 +961,26 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Victoria has two PDF documents (Document A and Document B) and
-                  needs to merge them into one, with pages from each document
-                  alternately placed in the new document (pages from Document A
-                  on even pages in the new document and pages from Document B on
-                  odd pages). Additionally, pages from Document A need to be
-                  rotated 90 degrees.
+                  Victoria ma dwa dokumenty PDF (dokument A i dokument B) i
+                  potrzebuje je scalić w jeden w ten sposób, że strony z każdego
+                  z dokumentów są umieszczone w nowym dokumencie naprzeniennie
+                  (strony z dokumentu A na stronach parzystych w nowym
+                  dokumencie a strony z dokumentu B na nieparzystych). Dodatkowo
+                  strony z dokumentu A trzeba obrócić o 90 stopni.
                 </p>
-                <h4 class="h4">Input Data:</h4>
+                <h4 class="h4">Dane wejściowe:</h4>
                 <p>
-                  2 PDF files with the same number of pages containing
-                  information in the same order.
+                  2 pliki PDF z taką samą ilością stron z informacjami
+                  umieszczonymi w takiej samej kolejności.
                 </p>
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A short script that asks for the location of both PDF
-                  documents and then generates a new InDesign document based on
-                  them.
+                  Krótki skrypt, który prosi o lokalizację obu dokumentów PDF a
+                  następnie generuje nowy dokument indesign na ich podstawie.
                 </p>
               </div>
             </div>
           </div>
-
           <!-- MARK: item 9 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -980,7 +989,7 @@
                 data-accordionbutton="9"
               >
                 <h3 class="ml-4 font-bold text-primary">
-                  Document Update Tool
+                  Narzędzie do aktualizowania dokumentów
                 </h3>
                 <svg
                   width="12"
@@ -999,43 +1008,42 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Adam has hundreds of product specifications created as
-                  InDesign files. All of them have the same footer with company
-                  information, which is created as a separate .indd file and
-                  linked in all specifications. After each change in the company
-                  information in the footer, he must refresh the link to the
-                  footer in each document and regenerate the PDF file. This is a
-                  time-consuming and tedious task, and Adam would like to
-                  automate it. He wants to control the actions that the script
-                  will perform: updating links in the files, saving the modified
-                  file, exporting to PDF, and optionally processing files in
-                  subfolders. Adam also wants to have the ability to choose
-                  predefined PDF export settings.
+                  Adam ma setki specyfikacji produktów wykonanych w formie
+                  plików InDesigna. Wszystkie mają jednakową stopkę z danymi
+                  firmowymi, która jest wykonana jako odzielny plik .indd i
+                  podlinkowana we wszystkich specyfikacjach. Po każdorazowej
+                  zmianie danych firmowych w stopce musi odświeżyć link do
+                  stopki w każdym z dokumentów i wygenerować na nowo plik PDF.
+                  To czasochłonne i nudne zadanie i Adam chciałby to zrobić
+                  automatycznie. Adam chce mieć możliwość kontrolowania
+                  czynności, które wykona skrypt: aktualizacja linków w plikach
+                  zapisanie zmienionego pliku wyeksportowanie do PDF opcjonalne
+                  przetwarzanie plików w podfolderach Adam chce także mieć
+                  możliwość wyboru predefiniowanych ustawień eksportu pliku PDF.
                 </p>
 
-                <h4 class="h4">Input Data</h4>
+                <h4 class="h4">Dane wejściowe</h4>
                 <ul class="list-inside list-disc">
                   <li>
-                    The entire folder tree containing product specifications in
-                    .indd files.
+                    całe drzewo folderów zawierających specyfikacje produktów w
+                    plikach .indd
                   </li>
                 </ul>
 
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A script that, when run, displays a dialog window allowing the
-                  selection of the folder with specifications and the options
-                  regarding the method of operation.
+                  Skrypt, który po uruchomieniu wyświetla okno dialogowe dające
+                  możliwość wybrania folderu ze specyfikacjami i wybrania opcji
+                  dotyczących sposobu działania.
                 </p>
 
-                <h4 class="h4">Delivered</h4>
+                <h4 class="h4">Dostarczono</h4>
                 <ul class="list-inside list-disc">
-                  <li>Script</li>
+                  <li>skrypt</li>
                 </ul>
               </div>
             </div>
           </div>
-
           <!-- MARK: item 10 -->
           <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -1044,7 +1052,7 @@
                 data-accordionbutton="10"
               >
                 <h3 class="ml-4 font-bold text-primary">
-                  Data Extraction Tool .indd => XML
+                  Narzędzie do ekstrakcji danych .indd => XML
                 </h3>
                 <svg
                   width="12"
@@ -1063,86 +1071,85 @@
               <div class="overflow-hidden">
                 <h4 class="h4">Problem</h4>
                 <p>
-                  Stanley has 3,304 articles created in InDesign and needs to
-                  move all of them online. He received information that he needs
-                  the content contained in these articles in the form of XML
-                  files. Additionally, not all information contained in the
-                  .indd files should be included in the resulting XML files. He
-                  wants to exclude certain texts formatted with specific styles,
-                  certain font sizes, or a combination of both. The articles are
-                  written in two language versions and must also be separated
-                  into individual files by language. Theoretically, language
-                  versions should be marked with paragraph styles indicating the
-                  language in which they are written, but in practice, this is
-                  often not the case, and one cannot rely on this 100%. An
-                  additional requirement is to add a strictly defined identifier
-                  to the XML file. The identifiers are in a pre-prepared CSV
-                  file containing data in the format TITLE;ID. The identifiers
-                  need to be assigned based on the title. Here, too, there is a
-                  problem because the titles in the CSV file do not always
-                  exactly match what is found in the .indd files. Moreover,
-                  there is an issue with different encoding of special
-                  characters in the CSV and .indd files. Different batches of
-                  .indd files are prepared in slightly different ways, and it is
-                  also necessary to have the ability to choose how the script
-                  should process this data for the best results. Stanley tried
-                  to create a script with the help of ChatGPT, but he did not
-                  achieve satisfactory results and wasted a lot of time allotted
-                  to him by the client to complete the task, which meant that he
-                  needs at least some of this XML data "yesterday."
+                  Stanley ma 3304 artykuły stworzone w InDesignie i potrzebuje
+                  je wszystkie przenieść online. Otrzymał informację, że
+                  potrzebuje treści zawartych w tych artykułach w formie plików
+                  XML. Dodatkowo nie wszyskie informacje zawarte w plikach .indd
+                  mają się znaleźć w wynikowych plikach XML. Chce aby została
+                  pominięta część tekstów sformatowana określonymi stylami,
+                  określoną wielkością pisma lub kombinacją obu. Artykuły są
+                  napisane w dwóch wersjach językowych i dodatkowo trzeba to
+                  rozdzielić do osobnych plików według języka. Teoretycznie
+                  wersje językowe powinny być oznaczone stylami akapitowymi
+                  oznaczającymi język, w jakim są napisane, ale w praktyce
+                  często tak nie jest i nie można na tym polegać w 100%.
+                  Dodatkowym wymogiem jest dodanie w pliku XML ściśle
+                  określonego identyfikatora. Identyfikatory ma w przygotowanym
+                  wcześniej pliku CSV zawierającym dane w formacie TYTUŁ
+                  ARTYKUŁU;ID. Trzeba identyfikatory przyporządkować na
+                  podstawie tytułu. Tutaj także pojawia się problem ponieważ
+                  tytuły w pliku CSV nie zawsze dokładnie odpowiadają temu, co
+                  znajduje się w plikach .indd. Ponadto występuje problem z
+                  różnym kodowaniem znaków specjalnych w CSV i .indd. Różne
+                  partie plików .indd są przygotowane w nieco odmienny sposób i
+                  potrzebna jest także możliwość wybrania sposobu w jaki skrypt
+                  ma te dane przetworzyć dla uzyskania najlepszych wyników.
+                  Stanley próbował samodzielnie stworzyć skrypt z pomocą chat
+                  GPT, ale nie uzyskał zadawalających wyników i stracił dużo
+                  czasu danego mu przez klienta na wykonanie zlecenia, co
+                  spowodowało, że potrzebuje chociaż części tych danych XML "na
+                  wczoraj".
                 </p>
 
-                <h4 class="h4">Input Data</h4>
+                <h4 class="h4">Dane wejściowe</h4>
                 <ul class="list-inside list-disc">
-                  <li>
-                    Thousands of .indd files and a CSV file with identifiers
-                  </li>
+                  tysiące plików .indd CSV z identyfikatorami
                 </ul>
 
-                <h4 class="h4">Solution</h4>
+                <h4 class="h4">Rozwiązanie</h4>
                 <p>
-                  A sophisticated script that, when run, displays a dialog
-                  window allowing the selection of the script's working
-                  algorithm and generates XML files based on the files placed in
-                  a specified folder and the provided CSV file. To recognize the
-                  language in which the content is written, the script uses
-                  DeepL artificial intelligence, while to more effectively find
-                  the identifier based on the title, the script uses the
-                  "Levenshtein Distance" algorithm, correcting the encoding of
-                  special characters beforehand. The main engine of the script
-                  is the built-in XML data processing mechanism in InDesign,
-                  which ensures their correctness and allows the use of XSLT
-                  technology to modify how the content is processed.
-                  Additionally, the script has an advanced error handling system
-                  that informs the user in a clear way about any problems
-                  (issues with DeepL connection, file reading, etc.). Stanley
-                  received the first simplified version of the script (without
-                  error handling, DeepL, and the Levenshtein algorithm) after a
-                  few days. However, this version generated XML files that
-                  required manual correction. Stanley received support on how to
-                  do this and what software to use for the fastest and most
-                  satisfactory effect. The script provided by Stanley, generated
-                  by ChatGPT, unfortunately turned out to be only somewhat
-                  useful, and attempts to fix it caused further unnecessary
-                  delays.
+                  Rozbudowany skrypt, który po uruchomieniu wyświetla okno
+                  dialogowe pozwalające wybrać algorytm pracy skryptu i generuje
+                  pliki XML na podstawie plików umieszczonych w określonym
+                  folderze oraz danego pliku CSV. Do rozpoznania języka w jakim
+                  napisane są treści skrypt używa sztucznej inteligencji DeepL,
+                  natomiast do bardziej skutecznego wyszukania identyfikatora na
+                  podstawie tytułu skrypt używa m.in. algorytmu "Odległość
+                  Levenshteina" uprzednio korygując kodowanie znaków
+                  specjalnych. Głównym silnikiem skryptu jest wbudowany w
+                  InDesignie mechanizm przetwarzania danych XML, który dba o ich
+                  poprawność i pozwala korzystać z technologii XSLT do
+                  modyfikowania sposobu, w jaki treści mają być przetwarzane.
+                  Dodatkowo skrypt posiada zaawansowany system obsługi błędów
+                  informujący użytkownika w czytelny sposób o zaistniałym
+                  problemie (problemy z połączeniem DeepL, odczytem plików
+                  itp.). Pierwszą uproszczoną wersję skryptu (bez obsługi
+                  błędów, DeepL i algorytmu Levenshteina) Stanley otrzymał już
+                  po kilku dniach. Wersja ta jednak generowała pliki XML
+                  wymagające manualnej korekty. Stanley otrzymał wsparcie
+                  dotyczące jak to robić i jakiego oprogramowania użyć dla
+                  możliwie najszybszego i zadawalającego efektu. Dostarczony
+                  przez Stanleya własny skrypt wygenerowany przez chat GPT
+                  niestety okazał się przydatny tylko w niewielkim stopniu a
+                  próby jego naprawy spowodowały dodatkowe niepotrzebne
+                  opóźnienie.
                 </p>
 
-                <h4 class="h4">Delivered</h4>
+                <h4 class="h4">Dostarczono</h4>
                 <ul class="list-inside list-disc">
-                  <li>UXP script</li>
+                  <li>skrypt UXP</li>
                   <li>
-                    XSLT templates defining XML file processing for both
-                    language versions
+                    szablony XSLT definiujące przetwarzanie plików XML dla obu
+                    wersji językowych
                   </li>
                   <li>
-                    Extensive support regarding the entire data processing
-                    process and troubleshooting
+                    szerokie wsparcie dotyczące całego procesu przetwarzania
+                    danych i rozwiązywania ewentualnych problemów
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-
           <!-- MARK: item temp -->
           <!-- <div class="overflow-hidden rounded ring-1 ring-primary/50">
             <div class="rounded bg-cgrey">
@@ -1182,15 +1189,15 @@
           <h2
             class="mb-2 text-center text-xl font-bold text-primary md:text-2xl lg:text-3xl xl:text-5xl"
           >
-            Have questions?
+            Masz pytania?
           </h2>
           <p class="mb-7 text-center font-light md:text-lg">
-            Take a look at
+            Zajrzyj do
             <a
               href="faq.html"
               class="underline underline-offset-2 hover:font-bold hover:text-primary"
               >FAQ</a
-            >. I will answer any other questions in 24h.
+            >. Na pozostałe pytania chętnie odpowiem w ciągu 24h.
           </p>
           <address
             class="flex flex-wrap gap-5 rounded-2xl bg-white p-[10px] not-italic"
@@ -1203,14 +1210,28 @@
                   viewBox="0 0 40 40"
                   class="fill-primary"
                 >
+                  <use href="#addresslocationpin"></use>
+                </svg>
+                <div class="grid flex-1 justify-between">
+                  <p class="text-xs font-light">Adress:</p>
+                  <p class="text-sm text-primary">Drążdżewo, Polska</p>
+                </div>
+              </div>
+              <div class="flex gap-3 rounded-[10px] bg-cgrey p-6">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  class="fill-primary"
+                >
                   <use href="#addressmail"></use>
                 </svg>
                 <div class="grid flex-1 justify-between">
                   <p class="text-xs font-light">Email:</p>
                   <a
-                    href="mailto:rafal@indesignplugins.dev"
+                    href="mailto:contact@agrastone.com"
                     class="text-sm text-primary"
-                    >rafal@indesignplugins.dev</a
+                    >firmowy@email.pl</a
                   >
                 </div>
               </div>
@@ -1224,7 +1245,7 @@
                   <use href="#addresstelephone"></use>
                 </svg>
                 <div class="grid flex-1 justify-between">
-                  <p class="text-xs font-light">Call:</p>
+                  <p class="text-xs font-light">Zadzwoń:</p>
                   <a href="tel:+48507722219" class="text-sm text-primary"
                     >+48 507 722 219</a
                   >
@@ -1234,95 +1255,100 @@
                 <div
                   class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
                 >
-                  <a href="under_construction.html">
-                    <svg
-                      width="18"
-                      height="21"
-                      viewBox="0 0 18 21"
-                      class="fill-primary"
-                    >
-                      <use href="#facebook"></use>
-                    </svg>
-                  </a>
+                  <svg
+                    width="18"
+                    height="21"
+                    viewBox="0 0 18 21"
+                    class="fill-primary"
+                  >
+                    <use href="#facebook"></use>
+                  </svg>
                 </div>
                 <div
                   class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
                 >
-                  <a href="under_construction.html">
-                    <svg
-                      width="18"
-                      height="19"
-                      viewBox="0 0 18 19"
-                      class="fill-primary"
-                    >
-                      <use href="#instagram"></use>
-                    </svg>
-                  </a>
+                  <svg
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 19"
+                    class="fill-primary"
+                  >
+                    <use href="#instagram"></use>
+                  </svg>
                 </div>
                 <div
                   class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
                 >
-                  <a href="under_construction.html">
-                    <svg
-                      width="18"
-                      height="19"
-                      viewBox="0 0 18 19"
-                      class="fill-primary"
-                    >
-                      <use href="#linkedin"></use>
-                    </svg>
-                  </a>
+                  <svg
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 19"
+                    class="fill-primary"
+                  >
+                    <use href="#linkedin"></use>
+                  </svg>
                 </div>
                 <div
                   class="flex aspect-square w-12 items-center justify-center rounded bg-cgrey"
                 >
-                  <a href="under_construction.html">
-                    <svg
-                      width="18"
-                      height="19"
-                      viewBox="0 0 18 18"
-                      class="fill-primary"
-                    >
-                      <use href="#behance"></use>
-                    </svg>
-                  </a>
+                  <svg
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 18"
+                    class="fill-primary"
+                  >
+                    <use href="#behance"></use>
+                  </svg>
                 </div>
               </div>
             </div>
 
-            <form class="mt-11 grid flex-1 gap-3">
+            <form
+              class="mt-11 grid flex-1"
+              action="https://indesignplugins.dev/api/email/contactmessage"
+              method="post"
+            >
               <div class="relative h-11 w-full min-w-[200px]">
                 <input
-                  placeholder="Name and Surname*"
+                  id="name"
+                  name="name"
+                  placeholder="Imię i nazwisko*"
                   class="disabled:bg-blue-gray-50 peer h-full w-full border-b border-[#E6E8EB] bg-transparent pb-1.5 pt-4 text-sm text-primary outline outline-0 transition-all placeholder:font-light placeholder:opacity-0 placeholder-shown:border-[#E6E8EB] focus:border-primary focus:outline-0 focus:placeholder:opacity-100 disabled:border-0"
                 />
                 <label
+                  for="name"
                   class="after:content[''] pointer-events-none absolute -top-1.5 left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-light leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#697484] peer-focus:after:scale-x-100 peer-focus:after:border-primary peer-disabled:text-transparent"
                 >
-                  Name and Surname*
+                  Imię i nazwisko*
                 </label>
               </div>
               <div class="relative h-11 w-full min-w-[200px]">
                 <input
+                  id="email"
+                  name="email"
                   placeholder="Email*"
                   class="disabled:bg-blue-gray-50 peer h-full w-full border-b border-[#E6E8EB] bg-transparent pb-1.5 pt-4 text-sm text-primary outline outline-0 transition-all placeholder:font-light placeholder:opacity-0 placeholder-shown:border-[#E6E8EB] focus:border-primary focus:outline-0 focus:placeholder:opacity-100 disabled:border-0"
                 />
                 <label
+                  for="email"
                   class="after:content[''] pointer-events-none absolute -top-1.5 left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-light leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#697484] peer-focus:after:scale-x-100 peer-focus:after:border-primary peer-disabled:text-transparent"
                 >
                   Email*
                 </label>
               </div>
-              <div class="relative w-full min-w-[200px]">
+              <div class="relative h-11 w-full min-w-[200px]">
                 <textarea
-                  placeholder="Message*"
+                  id="message"
+                  name="message"
+                  placeholder="Wiadomość*"
                   rows="4"
                   class="disabled:bg-blue-gray-50 peer w-full resize-none border-b border-[#E6E8EB] bg-transparent pb-1.5 pt-4 text-sm text-primary outline outline-0 transition-all placeholder:font-light placeholder:opacity-0 placeholder-shown:border-[#E6E8EB] focus:border-primary focus:outline-0 focus:placeholder:opacity-100 disabled:border-0"
                 ></textarea>
                 <label
-                  class="after:content[''] pointer-events-none absolute -top-1.5 left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-light leading-tight text-gray-500 transition-all after:absolute after:-bottom-0 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#697484] peer-focus:after:scale-x-100 peer-focus:after:border-primary peer-disabled:text-transparent"
+                  for="message"
+                  class="after:content[''] pointer-events-none absolute -top-1.5 left-0 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-light leading-tight text-gray-500 transition-all after:absolute after:-bottom-16 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#697484] peer-focus:after:scale-x-100 peer-focus:after:border-primary peer-disabled:text-transparent"
                 >
-                  Message*
+                  Wiadomość*
                 </label>
               </div>
 
@@ -1353,30 +1379,30 @@
         class="mx-auto max-w-[1400px] py-7 md:grid md:grid-cols-[70%_1fr]"
       >
         <ul class="gap-7 space-y-7 text-lg text-white md:flex md:space-y-0">
-          <li><a href="index.html">Why DeepForge</a></li>
-          <li><a href="founder.html">About</a></li>
-          <li><a href="index.html#uslugi">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Czemu DeepForge</a></li>
+          <li><a href="founder.html">O mnie</a></li>
+          <li><a href="#uslugi">Usługi</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
         </ul>
         <div
           class="mt-7 flex w-full items-center justify-between justify-self-end md:mt-0 md:max-w-[152px]"
         >
-          <a href="under_construction.html">
+          <a href="#">
             <svg viewBox="0 0 24 24" class="w-12 fill-white md:w-6">
               <use href="#facebookfilled" />
             </svg>
           </a>
-          <a href="under_construction.html">
+          <a href="#">
             <svg viewBox="0 0 18 19" class="w-12 fill-white md:w-6">
               <use href="#linkedin" />
             </svg>
           </a>
-          <a href="under_construction.html">
+          <a href="#">
             <svg viewBox="0 0 18 18" class="w-12 fill-white md:w-6">
               <use href="#behance" />
             </svg>
           </a>
-          <a href="under_construction.html">
+          <a href="#">
             <svg viewBox="0 0 18 19" class="w-12 fill-white md:w-6">
               <use href="#instagram" />
             </svg>
@@ -1391,10 +1417,8 @@
         <div
           class="col-span-1 col-start-2 mt-10 flex items-center justify-between gap-6 text-sm text-secondary md:justify-end"
         >
-          <span
-            ><a href="under_construction.html">Terms and conditions</a></span
-          >
-          <span><a href="under_construction.html">Privacy Policy</a></span>
+          <span><a href="#">Warunki świadczenia usług</a></span>
+          <span><a href="#">Polityka prywatności</a></span>
         </div>
       </nav>
     </footer>
